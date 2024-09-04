@@ -319,13 +319,37 @@ export const SKILLS = [
   },
   {
     icon: "",
-    name: "Accountability",
+    name: "Self Advocacy",
     experience: "",
     category: "Soft",
   },
   {
     icon: "",
-    name: "Self Advocacy",
+    name: "Proactive",
+    experience: "",
+    category: "Soft",
+  },
+  {
+    icon: "",
+    name: "Communication",
+    experience: "",
+    category: "Soft",
+  },
+  {
+    icon: "",
+    name: "Teamwork",
+    experience: "",
+    category: "Soft",
+  },
+  {
+    icon: "",
+    name: "Organization",
+    experience: "",
+    category: "Soft",
+  },
+  {
+    icon: "",
+    name: "Problem Solving",
     experience: "",
     category: "Soft",
   },
@@ -381,11 +405,11 @@ export const PROJECTS = [
       "A Java-based web application developed with MySQL and Maven for a single airline company. It enables users and agents to browse, select, and manage flights, seats, and insurance. Registered users enjoy perks, and airline agents/admins can handle various management tasks. The project prioritizes systematic design and may see evolving requirements during development.",
     image: projectImage4,
     githubLink: "https://github.com/IshaHaider/FlightSimulator",
-    languages: ["React", "Tailwind CSS"],
+    languages: ["Java", "MySQL", "Maven", "Databases", "OOP", "MVC"],
   },
   {
     id: 5,
-    name: "Obituary-AI Web Application ",
+    name: "Obituary-AI Web Application",
     class: "ENSF381",
     description:
       "A React.js application that utilizes ChatGPT API for profile generation, Amazon Polly for speech synthesis, and Cloudinary API for storage. AWS services such as DynamoDB and Lambda handle backend data management and serverless functions, respectively. Python is employed for scripting, and infrastructure provisioning is managed through Terraform.",

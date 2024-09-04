@@ -17,9 +17,20 @@ body {
   letter-spacing: 2.5px;
 }
 
-.bg-img {
-  background-image: url("../src/assets/bg-img3.png");
+.bg-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../src/assets/bg-img8.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Adjust opacity here */
+  z-index: -1; /* Make sure it stays behind the content */
 }
+
+/* .bg-img {
+  background-image: url("../src/assets/bg-img6.jpg");
+} */
 
 /* Apply Open Sans for base or smaller text sizes */
 .text-sm,

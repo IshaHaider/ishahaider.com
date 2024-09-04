@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="flex max-h-screen flex-wrap pt-8">
+    <section id="home" className="flex flex-wrap pt-8 px-12">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
