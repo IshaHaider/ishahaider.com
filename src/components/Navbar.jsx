@@ -35,6 +35,10 @@ const Navbar = () => {
     }
   };
 
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Tailwind's `md` breakpoint is 768px
@@ -61,6 +65,7 @@ const Navbar = () => {
               <img src={logo} width={130} alt="logo" className="px-10" />
             </a>
           </div>
+          <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
           {/* Navbar */}
           <nav className="flex-grow flex items-center justify-center">
             <div className="md:flex mx-auto hidden max-w-2xl items-center justify-center py-3 backdrop-blur-lg">
