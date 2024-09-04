@@ -1,6 +1,5 @@
 // tailwind.config.js
 import scrollbar from 'tailwind-scrollbar';
-// import 'pure-react-carousel/dist/react-carousel.es.css';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,7 +8,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      letterSpacing: {
+        '7px': '7px',
+      },
+    },
   },
   plugins: [
     scrollbar,

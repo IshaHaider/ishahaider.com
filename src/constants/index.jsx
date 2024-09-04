@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 
 import EduDialect from "../assets/edu-dialect.png";
 import Arcurve from "../assets/arcurve.png";
@@ -61,7 +62,7 @@ export const NAVIGATION_LINKS = [
 
 export const HERO = {
   name: "ISHA HAIDER",
-  greet: "Hello there! 👋🏻",
+  greet: "Welcome to My Corner of the Web!",
   description:
     "I'm a passionate software engineering student with hands-on experience in C#, C/C++, Python, and web technologies like React and Node.js. I’ve had the pleasure of leading and collaborating on exciting projects, whether it was as a Software Development Intern at Arcurve, a Telemetry Software Developer, or as the Co-President of Edu Dialect. I'm enthusiastic about bringing my technical skills and creative problem-solving to a dynamic internship, and I'm eager to continue growing in the fields of software development, DevOps, and leadership.",
 };
@@ -333,58 +334,104 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    id: 1,
-    name: "Personal Portfolio",
+    id: 0,
+    name: "Rycho",
+    class: "SENG401",
     description:
-      "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
+      "Rycho is an audio-sharing social media application for music and podcast enthusiasts, designed to create a vibrant community where users can discover, share, and engage with personalized content, leveraging features like customized playlists, song recommendations, and real-time interaction.",
+    image: projectImage6,
+    githubLink: "https://github.com/IshaHaider/Rycho",
+    languages: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express", "AWS", "Spotify API", "Google Cloud", "CSS"],
+  },
+  {
+    id: 1,
+    name: "VisionSync",
+    class: "Personal",
+    description:
+      "Developing advanced smart glasses that will produce scenic descriptions and real-time navigation through the utilization of computer vision and audio description. They will enhance scene understanding with CNNs (ResNet) and integrate Detectron2 for semantic segmentation and object recognition. This will work with rule-based systems to deliver directional audio cues via text-to-speech, improving accessibility and situational awareness.",
     image: projectImage1,
-    githubLink: "https://github.com/user/personal-portfolio",
-    languages: ["React", "Tailwind CSS"],
+    githubLink: "",
+    languages: ["Embedded", "CNNs (ResNet)", "Detectron2"],
   },
   {
     id: 2,
-    name: "E-Commerce Platform",
+    name: "Tetris Game",
+    class: "Personal",
     description:
-      "An e-commerce web application developed using Next.js and Stripe for payment integration, featuring a comprehensive product catalog, shopping cart, and checkout system.",
+      "Developed a Tetris game in C++ using OOP principles, focusing on modularity and maintainability. Implemented core mechanics like piece rotation, collision detection, line clearing, and a scoring system. Utilized SFML for GUI design, rendering game elements, managing user input, and handling real-time game logic.",
     image: projectImage2,
-    githubLink: "https://github.com/user/ecommerce-platform",
-    languages: ["Node.js", "Tailwind CSS"],
+    githubLink: "https://github.com/IshaHaider/Tetris",
+    languages: ["C++", "SFML", "OOP"],
   },
   {
     id: 3,
-    name: "Task Management Tool",
+    name: "Embedded Systems LED Controller",
+    class: "ENSF460",
     description:
-      "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards, task assignment, and progress tracking.",
+      "Employed the PIC24F16K101 microcontroller for the precise control of LED brightness or intensity, connected to pin 12, and presented the results using Python in Spyder. The application integrates push buttons linked to input ports RA2, RA4, and RB4, utilizing UART and Timer peripherals within the MPLAB IDE to capture voltages and regulate LED delays.",
     image: projectImage3,
-    githubLink: "https://github.com/user/task-management-tool",
-    languages: ["PostgreSQL", "Tailwind CSS"],
+    githubLink: "https://youtu.be/IP5TtW9Qeco",
+    languages: ["Python", "MPLAB X", "PIC24F16K101", "UART", "Embedded"],
   },
   {
     id: 4,
-    name: "Weather App",
+    name: "Flight Simulator",
+    class: "ENSF480",
     description:
-      "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with React and styled-components.",
+      "A Java-based web application developed with MySQL and Maven for a single airline company. It enables users and agents to browse, select, and manage flights, seats, and insurance. Registered users enjoy perks, and airline agents/admins can handle various management tasks. The project prioritizes systematic design and may see evolving requirements during development.",
     image: projectImage4,
-    githubLink: "https://github.com/user/weather-app",
+    githubLink: "https://github.com/IshaHaider/FlightSimulator",
     languages: ["React", "Tailwind CSS"],
   },
   {
     id: 5,
-    name: "Blog Platform",
+    name: "Obituary-AI Web Application ",
+    class: "ENSF381",
     description:
-      "A blogging platform developed with Next.js and Markdown for creating, editing, and publishing blog posts. It features a rich text editor, tag system, and user authentication.",
+      "A React.js application that utilizes ChatGPT API for profile generation, Amazon Polly for speech synthesis, and Cloudinary API for storage. AWS services such as DynamoDB and Lambda handle backend data management and serverless functions, respectively. Python is employed for scripting, and infrastructure provisioning is managed through Terraform.",
     image: projectImage5,
-    githubLink: "https://github.com/user/blog-platform",
-    languages: ["React", "Tailwind CSS"],
+    githubLink: "https://github.com/IshaHaider/Obituary-AI",
+    languages: ["React", "ChatGPT API", "Amazon Polly", "Cloudinary API", "AWS", "Terraform", "DynamoDB"],
   },
   {
     id: 6,
-    name: "Chat Application",
+    name: "Country Statistics Terminal App",
+    class: "ENDG233",
     description:
-      "A real-time chat application using Firebase for backend services, including user authentication, chat rooms, and instant messaging features. Built with React and Firebase.",
+      "A terminal-based Python application to process and plot data from CSV files based on user input. Utilized NumPy for data manipulation and Matplotlib for visualizations, enabling efficient data selection, processing, and graphical display.",
     image: projectImage6,
-    githubLink: "https://github.com/user/chat-application",
-    languages: ["React", "Tailwind CSS"],
+    githubLink: "https://github.com/IshaHaider/Country-Statistics",
+    languages: ["Python", "NumPy", "Matplotlib"],
+  },
+  {
+    id: 7,
+    name: "Museum Management System",
+    class: "ENSF300",
+    description:
+      "A Python application that connects to a MySQL database for maintenance, data entry, and browsing. It includes an admin interface for executing SQL commands, a data entry interface for managing records with user-friendly prompts, and a browsing interface for guided database exploration. User roles and access levels are determined through login credentials.",
+    image: projectImage6,
+    githubLink: "https://github.com/IshaHaider/Museum-Project",
+    languages: ["Python", "MySQL", "Databases", "OOP", "MVC"],
+  },
+  {
+    id: 8,
+    name: "Common Data Structures Library",
+    class: "ENSF338",
+    description:
+      "The project involves creating a Java library called 'myLib' for common data structures, organized into a modular package. It includes linear data structures, tree structures, heaps, and graph algorithms, all designed for integers. The library will be tested using a main app or JUnit tests, with an option to support generic data types for extra credit.",
+    image: projectImage6,
+    githubLink: "https://github.com/IshaHaider/Common-Data-Structures-Library",
+    languages: ["Java", "Data Structures", "Algorithms", "OOP", "MVC", "JUnit"],
+  },
+  {
+    id: 9,
+    name: "Schedule Builder",
+    class: "ENSF380",
+    description:
+      "Ever had to manage a centre of pets that require medicine, certain care, and certain foods given a limited amount of staff? This java program uses a clean GUI and an algorithm to sort through a database to create the perfect schedule to account for all pet needs.",
+    image: projectImage6,
+    githubLink: "https://github.com/IshaHaider/ScheduleBuilder",
+    languages: ["Java", "GUI", "Databases", "Algorithms", "OOP", "MVC", "JUnit"],
   },
 ];
 
@@ -479,7 +526,9 @@ export const EDUCATION = [
   },
 ];
 
-export const CLASSES = [{}];
+export const CLASSES = [{
+  placeholder: "Data Structures & Algorithms  |  Full-Stack Web Development  |  Embedded Systems  |  OOP  |  Computer Organization  |  Linear Algebra  |  Digital Circuits  |  Digital Logic  |  Statistics and Machine Learning  |  Databases  |  Networks  |  OS  |  Software Testing"
+}];
 
 export const SOCIAL_MEDIA_LINKS = [
   {
@@ -493,5 +542,9 @@ export const SOCIAL_MEDIA_LINKS = [
   {
     href: "https://www.linkedin.com/in/isha-haider/",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "mailto:isha.haider213@gmail.com",
+    icon: <MdEmail fontSize={25} className="hover:opacity-80" />,
   },
 ];

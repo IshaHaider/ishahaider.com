@@ -3,13 +3,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/logo2.png";
 import { NAVIGATION_LINKS } from "../constants";
 import { Link } from "react-router-dom";
-import resume from "../assets/Resume.pdf";
 import { MdArrowOutward } from "react-icons/md";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -59,12 +58,12 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex flex-shrink-0 items-center">
             <a href="/#">
-              <img src={logo} width={150} alt="logo" className="pr-10" />
+              <img src={logo} width={130} alt="logo" className="px-10" />
             </a>
           </div>
           {/* Navbar */}
           <nav className="flex-grow flex items-center justify-center">
-            <div className="md:flex mx-auto hidden max-w-2xl items-center justify-center  py-3 backdrop-blur-lg">
+            <div className="md:flex mx-auto hidden max-w-2xl items-center justify-center py-3 backdrop-blur-lg">
               <div className="flex items-center justify-between gap-6">
                 <div className="flex">
                   {/* <p className="text-4xl font-bold">𝕀𝕊ℍ𝔸.ℍ </p> */}
@@ -75,7 +74,7 @@ const Navbar = () => {
                       <li key={index}>
                         <Link to={item.href}>
                           <a
-                            className="block w-full text-l lg:text-xl  hover:text-yellow-400"
+                            className="block w-full text-lg lg:text-2xl hover:text-yellow-400"
                             href={item.href}
                             onClick={(e) => handleLinkClick(e, item.href)}
                           >
@@ -92,12 +91,12 @@ const Navbar = () => {
           {/* Resume Button */}
           <div className="flex flex-shrink-0">
             <a
-              href={resume}
+              href="https://drive.google.com/file/d/1e0ZKHyKitcu-aCrZYiPcgTGkKWbAwFTV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <button className="flex items-center p-2.5 lg:text-xl text-base border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
+              <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
                 <span>Resume</span>
                 <MdArrowOutward className="ml-2" />
               </button>
@@ -112,41 +111,41 @@ const Navbar = () => {
           {/* Logo & Resume */}
           <div className="flex flex-col flex-shrink-0 items-center">
             <a href="/#">
-              <img src={logo} width={150} alt="logo" />
+              <img src={logo} width={100} alt="logo" />
             </a>
             <a
-              href={resume}
+              href="https://drive.google.com/file/d/1e0ZKHyKitcu-aCrZYiPcgTGkKWbAwFTV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block pt-2"
             >
               <button className="flex items-center text-sm p-2 border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
-                <strong>Resume</strong>
+                <span>Resume</span>
                 <MdArrowOutward className="ml-2" />
               </button>
             </a>
           </div>
           {/* NavBar DropDown */}
           {isMobileMenuOpen && (
-              <nav className="absolute right-16 top-4 w-5/12 mt-2 rounded-lg backdrop-blur-lg bg-white/50 shadow-lg z-100">
-                <div className="ml-4 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-200">
-                  <ul className="flex flex-col gap-2 py-4 pr-4">
-                    {NAVIGATION_LINKS.map((item, index) => (
-                      <li key={index}>
-                        <Link to={item.href}>
-                          <a
-                            className=" block w-full text-lg pl-4 font-semibold hover:text-black hover:bg-white/50 hover:shadow-lg hover:rounded-lg"
-                            href={item.href}
-                            onClick={(e) => handleLinkClick(e, item.href)}
-                          >
-                            {item.label}
-                          </a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </nav>
+            <nav className="absolute right-16 top-4 w-5/12 mt-2 rounded-lg backdrop-blur-lg bg-white/50 shadow-lg z-100">
+              <div className="ml-4 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-200">
+                <ul className="flex flex-col gap-2 py-4 pr-4">
+                  {NAVIGATION_LINKS.map((item, index) => (
+                    <li key={index}>
+                      <Link to={item.href}>
+                        <a
+                          className=" block w-full text-lg pl-4 font-semibold hover:text-black hover:bg-white/50 hover:shadow-lg hover:rounded-lg"
+                          href={item.href}
+                          onClick={(e) => handleLinkClick(e, item.href)}
+                        >
+                          {item.label}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </nav>
           )}
           {/* NavBar Icon*/}
           <div className="relative flex items-center">
