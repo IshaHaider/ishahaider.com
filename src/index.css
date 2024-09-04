@@ -32,7 +32,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
+a {
+  margin: 0;
+  padding: 0;
+  display: inline; /* Ensure links don’t cause layout shifts */
+}
 
 *,
 *::before,
