@@ -20,33 +20,41 @@ const itemVariants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
 
-// Utility function to parse experience into a sortable number
-const parseExperience = (experience) => {
-  const match = experience.match(/(\d+(\.\d+)?)/);
-  return match ? parseFloat(match[1]) : 0;
+// Utility function to map experience levels to numeric values
+const experienceLevelToNumber = (level) => {
+  switch (level) {
+    case "Advanced":
+      return 3;
+    case "Intermediate":
+      return 2;
+    case "Beginner":
+      return 1;
+    default:
+      return 0; // For any unrecognized level
+  }
 };
 
-// Group and sort SKILLS by category and experience
+// Group and sort SKILLS by category and experience level
 const groupedSkills = {
   "Web Development": SKILLS.filter(
     (skill) => skill.category === "Web Development"
   ).sort(
-    (a, b) => parseExperience(b.experience) - parseExperience(a.experience)
+    (a, b) => experienceLevelToNumber(b.experience) - experienceLevelToNumber(a.experience)
   ),
   "Languages & Tools": SKILLS.filter(
     (skill) => skill.category === "Languages & Tools"
   ).sort(
-    (a, b) => parseExperience(b.experience) - parseExperience(a.experience)
+    (a, b) => experienceLevelToNumber(b.experience) - experienceLevelToNumber(a.experience)
   ),
   Technologies: SKILLS.filter(
     (skill) => skill.category === "Technologies"
   ).sort(
-    (a, b) => parseExperience(b.experience) - parseExperience(a.experience)
+    (a, b) => experienceLevelToNumber(b.experience) - experienceLevelToNumber(a.experience)
   ),
   "Cloud Services": SKILLS.filter(
     (skill) => skill.category === "Cloud Services"
   ).sort(
-    (a, b) => parseExperience(b.experience) - parseExperience(a.experience)
+    (a, b) => experienceLevelToNumber(b.experience) - experienceLevelToNumber(a.experience)
   ),
 };
 
@@ -121,7 +129,7 @@ const Skills = () => (
         {softSkills.map((skill, index) => (
           <div
             key={index}
-            className="p-4 border border-stone-50/30 rounded-lg flex items-center justify-center text-lg font-semibold"
+            className="p-4 border border-stone-50/30 rounded-lg flex items-center justify-center font-semibold text-xl font-open-sans"
           >
             {skill.name}
           </div>

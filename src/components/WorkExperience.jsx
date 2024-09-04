@@ -2,7 +2,8 @@ import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
-
+import { MdDoubleArrow } from "react-icons/md";
+import "../index.css";
 
 const linkify = (text) => {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -106,10 +107,11 @@ const WorkExperience = () => {
                         visibleDescriptions[index] ? "max-h-screen" : "max-h-0"
                       }`}
                     >
-                      <ul className="mt-2 text-base list-disc pl-5">
+                      <ul className="mt-2 text-base list-disc pl-2">
                         {experience.description.map((desc, i) => (
-                          <li key={i} className="mb-1">
-                            {linkify(desc)}
+                          <li key={i} className="mb-1 flex items-start">
+                            <MdDoubleArrow className="h-4 w-4 text-stone-50/40 mr-2 mt-1 flex-shrink-0" />
+                            <span className="flex-1">{linkify(desc)}</span>
                           </li>
                         ))}
                       </ul>
