@@ -283,7 +283,7 @@ export const SKILLS = [
   // Soft Skills
   {
     icon: "",
-    name: "Public Speaking",
+    name: "Interpersonal Skills",
     experience: "",
     category: "Soft",
   },
