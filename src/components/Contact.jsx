@@ -101,8 +101,8 @@ const Contact = () => {
               value={formData.name}
               placeholder="Name"
               onChange={handleChange}
-              className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30
-              bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none"
+              className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30  bg-stone-100
+              bg-transparent px-3 py-2 text-base focus:border-stone-400 focus:outline-none"
             />
             {errors.name && (
               <motion.p
@@ -122,8 +122,8 @@ const Contact = () => {
               value={formData.email}
               placeholder="Email"
               onChange={handleChange}
-              className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30
-              bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none"
+              className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30  bg-stone-100
+              bg-transparent px-3 py-2 text-base focus:border-stone-400 focus:outline-none"
             />
             {errors.email && (
               <motion.p
@@ -144,8 +144,8 @@ const Contact = () => {
             value={formData.message}
             placeholder="Message"
             onChange={handleChange}
-            className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30
-              bg-transparent px-3 py-2 text-sm focus:border-stone-400 focus:outline-none"
+            className="mb-8 w-full appearance-none rounded-lg border border-stone-50/30  bg-stone-100
+              bg-transparent px-3 py-2 text-base focus:border-stone-400 focus:outline-none"
             rows="6"
           />
           {errors.message && (
@@ -160,12 +160,12 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-200 
-          px-4 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-300 
+          className={`mb-8 w-full rounded border border-stone-50/30 bg-stone-100
+          px-4 py-2 text-sm font-semibold text-stone-900 hover:bg-stone-400 
           ${isSending ? "cursor-not-allowed opacity-50" : ""}`}
           disabled={isSending}
         >
-          <div className="flex items-center justify-center gap-2">
+          <div className="flex items-center justify-center gap-2 text-base">
             {isSending ? "Sending..." : "Send Message"}
             <FiSend />
           </div>

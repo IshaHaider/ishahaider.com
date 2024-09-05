@@ -43,7 +43,7 @@ const Hero = () => {
         >
           {HERO.name}
         </h2>
-        <p className="p-2 text-3xl lg:text-4xl">
+        <p className="p-2 text-xl md:text-2xl">
           <motion.span
             className="inline-block"
             variants={container}

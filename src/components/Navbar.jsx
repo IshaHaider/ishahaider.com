@@ -9,8 +9,6 @@ import { MdOutlineLightMode, MdLightMode } from "react-icons/md";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -37,10 +35,6 @@ const Navbar = () => {
     }
   };
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -61,11 +55,11 @@ const Navbar = () => {
     <>
       {/* Desktop Menu */}
       {!isMobile && (
-        <div className="flex items-center justify-between fixed top-0 left-0 right-0 p-4 backdrop-blur-lg shadow-md z-50">
+        <div className="flex items-center justify-between fixed top-0 left-0 right-0 p-1 backdrop-blur-lg shadow-md z-50">
           {/* Logo */}
           <div className="flex flex-shrink-0 items-center">
             <a href="/#">
-              <img src={logo} width={130} alt="logo" className="px-10" />
+              <img src={logo} width={150} alt="logo" className="px-10" />
             </a>
           </div>
 
@@ -77,19 +71,6 @@ const Navbar = () => {
                   {/* <p className="text-4xl font-bold">𝕀𝕊ℍ𝔸.ℍ </p> */}
                 </div>
                 <div className="flex">
-                  <div className="pr-8">
-                    <button
-                      onClick={toggleDarkMode}
-                      className="p-1  rounded bg-gray-800 text-white hover:bg-gray-700 transition-colors"
-                    >
-                      {isDarkMode ? (
-                        <MdOutlineLightMode size={24} />
-                      ) : (
-                        <MdLightMode size={24} />
-                      )}
-                    </button>
-                  </div>
-
                   <ul className="flex items-center lg:gap-8 gap-4 pr-4 ">
                     {NAVIGATION_LINKS.map((item, index) => (
                       <li key={index}>
@@ -150,18 +131,6 @@ const Navbar = () => {
           {isMobileMenuOpen && (
             <nav className="absolute right-16 top-4 w-5/12 mt-2 rounded-lg backdrop-blur-lg bg-white/50 shadow-lg z-100">
               <div className="ml-4 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-200">
-              <div className="pl-4 pt-8">
-                    <button
-                      onClick={toggleDarkMode}
-                      className="p-1  rounded bg-gray-800 text-white hover:bg-gray-700 transition-colors"
-                    >
-                      {isDarkMode ? (
-                        <MdOutlineLightMode size={15} />
-                      ) : (
-                        <MdLightMode size={15} />
-                      )}
-                    </button>
-                  </div>
                 <ul className="flex flex-col gap-2 py-4 pr-4">
                   {NAVIGATION_LINKS.map((item, index) => (
                     <li key={index}>

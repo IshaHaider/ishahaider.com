@@ -24,14 +24,14 @@ const Education = () => {
           key={index}
           className="mb-6 pt-10 pl-10 pr-10"
         >
-          <h3 className="text-xl font-semibold">{education.degree}</h3>
-          <p className="text-lg">{education.institution}</p>
-          <p className="text-sm text-stone-300">{education.duration}</p>
-          <p className="mt-2">
+          <h3 className="text-2xl font-semibold">{education.degree}</h3>
+          <p className="text-xl">{education.institution}</p>
+          <p className="text-base text-stone-300 italic">{education.duration}</p>
+          <p className="mt-2 text-base">
             <strong>Honors & Awards: </strong>
             {education.awards}
           </p>
-          <p className="mt-2">
+          <p className="mt-2 text-base">
             <strong>Global Experience: </strong>
             {education.experiences}
           </p>
