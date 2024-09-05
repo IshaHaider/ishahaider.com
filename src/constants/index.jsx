@@ -574,18 +574,18 @@ export const CLASSES = [{
 export const SOCIAL_MEDIA_LINKS = [
   {
     href: "https://www.instagram.com/ishahaiderr/",
-    icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
+    icon: <FaInstagram fontSize={30} className="hover:opacity-80" />,
   },
   {
     href: "https://github.com/IshaHaider",
-    icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
+    icon: <FaGithub fontSize={30} className="hover:opacity-80" />,
   },
   {
     href: "https://www.linkedin.com/in/isha-haider/",
-    icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
+    icon: <FaLinkedin fontSize={30} className="hover:opacity-80" />,
   },
   {
     href: "mailto:isha.haider213@gmail.com",
-    icon: <MdEmail fontSize={25} className="hover:opacity-80" />,
+    icon: <MdEmail fontSize={30} className="hover:opacity-80" />,
   },
 ];
