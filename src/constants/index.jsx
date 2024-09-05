@@ -64,7 +64,7 @@ export const HERO = {
   name: "ISHA HAIDER",
   greet: "Welcome to My Corner of the Web!",
   description:
-    "I'm a passionate software engineering student with hands-on experience in C#, C/C++, Python, and web technologies like React and Node.js. I’ve had the pleasure of leading and collaborating on exciting projects, whether it was as a Software Development Intern at Arcurve, a Telemetry Software Developer, or as the Co-President of Edu Dialect. I'm enthusiastic about bringing my technical skills and creative problem-solving to a dynamic internship, and I'm eager to continue growing in the fields of software development, DevOps, and leadership.",
+    "As a software engineer, I thrive on solving problems and creating impactful solutions. I’m passionate about coding and always eager to learn and improve. Off the laptop, I enjoy mind games, coffee, keeping things tidy, exploring nature, and trying new experiences. Balancing creativity and curiosity drives me both in and out of work.",
   song: "https://www.youtube.com/watch?v=5qap5aO4i9A",
   podcast: "https://www.youtube.com/watch?v=5qap5aO4i9A",
   book: "https://www.youtube.com/watch?v=5qap5aO4i9A",
