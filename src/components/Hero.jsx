@@ -30,15 +30,15 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="flex flex-wrap pt-8 px-12">
+    <section id="home" className="flex flex-wrap pt-40 md:-pt-12 px-12">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="w-full md:w-1/2 pr-4"
+        className="w-full md:w-1/2 pr-4 mb-8"
       >
         <h2
-          className="my-8 p-2 pt-8 text-5xl font-bold lg:text-[7rem]"
+          className=" p-2 text-5xl font-bold lg:text-[7rem]"
           style={{ letterSpacing: "12px" }}
         >
           {HERO.name}
@@ -71,12 +71,12 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 lg:p-8"
       >
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-start h-screen">
           <div className="max-h-full w-full sm:w-3/4 lg:w-5/6 p-8 bg-white/10 border border-gray-300/30 rounded-xl shadow-lg">
             <h2 className="text-2xl font-bold text-center mb-6">
               My Current Favorites
             </h2>
-            <ul className="space-y-4 text-lg">
+            <ul className="space-y-4 text-xl">
               <li className="flex items-center">
                 <span role="img" aria-label="music" className="mr-4">🎶</span>
                 Song:{" "}
