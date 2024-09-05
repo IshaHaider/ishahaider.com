@@ -129,7 +129,7 @@ const Skills = () => (
         {softSkills.map((skill, index) => (
           <div
             key={index}
-            className="p-4 border border-stone-50/30 rounded-lg flex items-center justify-center font-semibold md:text-xl text-sm font-open-sans"
+            className="p-4 border border-stone-50/30 rounded-lg flex items-center justify-center font-semibold md:text-base text-sm font-open-sans"
           >
             {skill.name}
           </div>

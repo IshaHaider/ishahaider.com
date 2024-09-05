@@ -21,16 +21,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../src/assets/bg-img8-light.png"); /* Default for light mode */
+  background-image: url("../src/assets/bg-img11.jpg"); /* Default for light mode */
   background-size: cover;
   background-position: center;
-  opacity: 0.3; /* Adjust opacity */
-  z-index: -1; /* Stay behind content */
-}
-
-.dark .bg-img::before {
-  background-image: url("../src/assets/bg-img8-dark.png"); /* For dark mode */
   opacity: 0.4; /* Adjust opacity */
+  z-index: -1; /* Stay behind content */
 }
 
 /* .bg-img {

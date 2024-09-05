@@ -54,7 +54,7 @@ const MultiFilters = () => {
               {skills.map((skill, index) => (
                 <button
                   onClick={() => handleFilterButtonClick(skill.name)}
-                  className={`px-2 py-1 rounded-lg text-white ${
+                  className={`px-2 py-1 rounded-lg text-white${
                     selectedFilters.includes(skill.name)
                       ? "bg-blue-600"
                       : "bg-gray-600 hover:bg-gray-700"
