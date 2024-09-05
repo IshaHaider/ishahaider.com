@@ -65,7 +65,13 @@ export const HERO = {
   greet: "Welcome to My Corner of the Web!",
   description:
     "I'm a passionate software engineering student with hands-on experience in C#, C/C++, Python, and web technologies like React and Node.js. I’ve had the pleasure of leading and collaborating on exciting projects, whether it was as a Software Development Intern at Arcurve, a Telemetry Software Developer, or as the Co-President of Edu Dialect. I'm enthusiastic about bringing my technical skills and creative problem-solving to a dynamic internship, and I'm eager to continue growing in the fields of software development, DevOps, and leadership.",
-};
+  song: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  podcast: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  book: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  activity: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  food: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  languages: ["Java", "C++"],
+  };
 
 export const SKILLS = [
   // Web Development
@@ -457,6 +463,16 @@ export const PROJECTS = [
     githubLink: "https://github.com/IshaHaider/ScheduleBuilder",
     languages: ["Java", "GUI", "Databases", "Algorithms", "OOP", "MVC", "JUnit"],
   },
+  {
+    id: 10,
+    name: "Braille Translator",
+    class: "Personal (Shopify)",
+    description:
+      "A small terminal line program that converts braille to english or english to braille",
+    image: projectImage6,
+    githubLink: "    - [ ] https://github.com/IshaHaider/braille-translator",
+    languages: ["Python", "Data Patterns", "Algorithms", "OOP"],
+  },
 ];
 
 export const EXPERIENCES = [
@@ -547,6 +563,7 @@ export const EDUCATION = [
       "Dean's List (x2)  |  NSERC USRA  |  Jason Lang Scholarships (x2)  |  Women in STEM Scholarship  |  Digital Citizenship Graduation Award  |  Diversity Champions in Engineering Award",
     experiences:
       "Participated in a transformative trip to Silicon Valley in Feb'24, alongside 15 students, focusing on valuable networking, leadership development, and career advancement. Interacted with seasoned tech leaders and esteemed research professors, gaining insights into excelling in our careers and recognizing the profound impact we, as aspiring software engineers, can make on the future.",
+    classes: ["Data Structures & Algorithms", "Full-Stack Web Development", "Web Principles", "Embedded Systems", "Object-Oriented Programming", "Computer Organization", "Linear Algebra", "Digital Circuits", "Digital Logic", "Statistics and Machine Learning", "Databases", "Networks", "Operating Systems", "Software Testing", "Mathematics"],
   },
 ];
 

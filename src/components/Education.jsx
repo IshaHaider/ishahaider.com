@@ -26,7 +26,9 @@ const Education = () => {
         >
           <h3 className="text-2xl font-semibold">{education.degree}</h3>
           <p className="text-xl">{education.institution}</p>
-          <p className="text-base text-stone-300 italic">{education.duration}</p>
+          <p className="text-base text-stone-300 italic">
+            {education.duration}
+          </p>
           <p className="mt-2 text-base">
             <strong>Honors & Awards: </strong>
             {education.awards}
@@ -35,6 +37,21 @@ const Education = () => {
             <strong>Global Experience: </strong>
             {education.experiences}
           </p>
+          <div className="pt-8">
+            <div className="bg-cyan-950 max-w-4xl rounded-lg p-8">
+              <p className="text-xl font-open-sans pb-2">
+                <strong>Significant Classes:</strong>
+              </p>
+              <div className="flex flex-col text-lg pl-4 font-open-sans ">
+                {education.classes.map((className, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <MdArrowOutward className="text-stone-300 " />
+                    <span className="pl-2">{className}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </motion.div>
       ))}
     </section>
