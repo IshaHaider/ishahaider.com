@@ -169,14 +169,21 @@ html {
 }
 
 .slider-controler .swiper-button-next {
-  left: 58% !important;
-  transform: translateX(-58%) !important;
+  left: 60% !important;
+  transform: translateX(-60%) !important;
 }
 
 @media (max-width: 990px) {
   .slider-controler .swiper-button-next {
     left: 70% !important;
     transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .slider-controler .swiper-button-prev,
+  .slider-controler .swiper-button-next {
+    display: none; /* Hide arrows on mobile */
   }
 }
 
@@ -206,8 +213,8 @@ html {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  left: 42%;
-  transform: translateX(-42%);
+  left: 40%;
+  transform: translateX(-40%);
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
@@ -221,19 +228,25 @@ html {
 }
 
 .swiper-pagination {
+  display: flex;
+  justify-content: center;
   position: relative;
-  width: 15rem !important;
+  width: 18rem !important;
   bottom: 1rem;
 }
 
+/* Regular pagination bullets (white) with drop shadow */
 .swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  background-color: rgb(163, 159, 159); /* Set regular bullets to white */
+  filter: drop-shadow(0px 8px 24px rgba(203, 208, 219, 0.1));
+  opacity: 0.6; /* Ensures full visibility */
 }
 
+/* Active pagination bullet (blue or purple) */
 .swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
+  background-color: #2d928d; 
+  border: 1px solid #f5f5f5;
 }
-
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

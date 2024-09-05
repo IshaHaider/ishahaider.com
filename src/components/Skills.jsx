@@ -125,11 +125,11 @@ const Skills = () => (
         </motion.h2>
         <p className="text-lg italic">what do I bring to the workplace?</p>
       </div>
-      <div className="grid grid-cols-3 gap-4 px-4 py-2 lg:px-20 text-center">
+      <div className="grid grid-cols-3 gap-4 px-4 py-2 lg:px-20 text-center ">
         {softSkills.map((skill, index) => (
           <div
             key={index}
-            className="p-4 border border-stone-50/30 rounded-lg flex items-center justify-center font-semibold md:text-base text-sm font-open-sans"
+            className="p-4 border border-stone-50/30 rounded-lg flex min-w-full items-center text-wrap break-all justify-center font-semibold md:text-base text-sm font-open-sans " 
           >
             {skill.name}
           </div>
