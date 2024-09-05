@@ -38,12 +38,12 @@ const Hero = () => {
         className="w-full md:w-1/2 pr-4 mb-8"
       >
         <h2
-          className=" p-2 text-5xl font-bold lg:text-[7rem]"
+          className=" p-2 text-5xl font-bold lg:text-[7rem] md:text-left text-center"
           style={{ letterSpacing: "12px" }}
         >
           {HERO.name}
         </h2>
-        <p className="p-2 text-xl md:text-2xl">
+        <p className="p-2 text-xl md:text-2xl md:text-left text-center">
           <motion.span
             className="inline-block"
             variants={container}
@@ -54,14 +54,14 @@ const Hero = () => {
               <motion.span
                 key={index}
                 variants={child}
-                className="inline-block"
+                className="inline-block "
               >
                 {letter === " " ? "\u00A0" : letter}
               </motion.span>
             ))}
           </motion.span>
         </p>
-        <p className="p-2 text-lg font-open-sans text-justify leading-loose">
+        <p className="p-2 text-lg font-open-sans md:text-left text-center leading-loose">
           {HERO.description}
         </p>
       </motion.div>
@@ -71,7 +71,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="w-full md:w-1/2 lg:p-8"
       >
-        <div className="flex justify-center items-start h-screen">
+        <div className="flex justify-center items-start">
           <div className="max-h-full w-full sm:w-3/4 lg:w-5/6 p-8 bg-white/10 border border-gray-300/30 rounded-xl shadow-lg">
             <h2 className="text-2xl font-bold text-center mb-6">
               My Current Favorites

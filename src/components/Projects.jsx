@@ -71,11 +71,16 @@ const Projects = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: activeSlide === project.id ? 1 : 0 }}
                   transition={{ duration: 0.5 }}
-                  className="absolute inset-0 flex flex-col justify-between text-white backdrop-blur-lg transition-opacity duration-500"
+                  className="absolute inset-0 flex flex-col justify-between text-white backdrop-blur-lg transition-opacity duration-500 overflow-auto"
+                  style={{ minHeight: "100%" }}
                 >
                   <div className="flex-1 mt-12">
-                    <h3 className="text-4xl text-center font-semibold mb-2 tracking-7px">{project.name}</h3>
-                    <p className="text-xs md:text-sm text-center font-open-sans px-1">{project.description}</p>
+                    <h3 className="text-4xl text-center font-semibold mb-2 tracking-7px">
+                      {project.name}
+                    </h3>
+                    <p className="text-xs md:text-sm text-center font-open-sans px-1">
+                      {project.description}
+                    </p>
                   </div>
                   <div className="text-center mt-4">
                     {project.githubLink && project.githubLink.trim() !== "" && (
@@ -89,7 +94,9 @@ const Projects = () => {
                         <MdArrowOutward className="ml-2" />
                       </a>
                     )}
-                    <p className="mt-4 px-2 md:text-lg text-base font-semibold tracking-7px">LANGUAGES:</p>
+                    <p className="mt-4 px-2 md:text-lg text-base font-semibold tracking-7px">
+                      LANGUAGES:
+                    </p>
                     <p className="text-xs md:text-sm mb-8 px-2 italic font-open-sans">
                       {project.languages.map((language) => language).join(", ")}
                     </p>
@@ -109,6 +116,7 @@ const Projects = () => {
           </div>
         </Swiper>
       </div>
+      <div style={{ height: "8rem" }}></div>{" "}
     </section>
   );
 };
