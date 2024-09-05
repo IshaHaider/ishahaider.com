@@ -35,7 +35,6 @@ const Navbar = () => {
     }
   };
 
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Tailwind's `md` breakpoint is 768px
@@ -55,11 +54,11 @@ const Navbar = () => {
     <>
       {/* Desktop Menu */}
       {!isMobile && (
-        <div className="flex items-center justify-between fixed top-0 left-0 right-0 p-1 backdrop-blur-lg shadow-md z-50">
+        <div className="flex items-center justify-between fixed top-0 left-2 right-0 backdrop-blur-lg shadow-md z-50">
           {/* Logo */}
           <div className="flex flex-shrink-0 items-center">
             <a href="/#">
-              <img src={logo} width={150} alt="logo" className="px-10" />
+              <img src={logo} width={160} alt="logo" className="px-10" />
             </a>
           </div>
 
@@ -90,17 +89,18 @@ const Navbar = () => {
               </div>
             </div>
           </nav>
+
           {/* Resume Button */}
-          <div className="flex flex-shrink-0">
+          <div className="relative flex flex-shrink-0">
             <a
               href="https://drive.google.com/file/d/1e0ZKHyKitcu-aCrZYiPcgTGkKWbAwFTV/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block"
+              className="relative inline-block right-8"
             >
               <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
                 <span>Resume</span>
-                <MdArrowOutward className="ml-2" />
+                <MdArrowOutward className="ml-" />
               </button>
             </a>
           </div>
