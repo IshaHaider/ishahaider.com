@@ -159,11 +159,8 @@ const Navbar = () => {
                     <li key={index}>
                       <Link to={item.href}>
                         <a
-                          className={`block text-lg font-semibold p-2 rounded ${
-                            activeLink === item.href
-                              ? "text-black bg-gray-300"
-                              : "text-white"
-                          } hover:bg-gray-300 hover:text-black focus:bg-gray-300 focus:text-black `}
+                          className={`block text-lg font-semibold p-2 rounded "text-white" 
+                          } hover:bg-gray-300 hover:text-black`}
                           href={item.href}
                           onClick={(e) => handleLinkClick(e, item.href)}
                         >
@@ -178,7 +175,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="relative inline-block bottom-0"
                   >
-                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-gray-300 hover:text-black focus:bg-gray-300 focus:text-black"
+                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-gray-300 hover:text-black"
                     >
                       <span>Resume</span>
                       <MdArrowOutward className="ml-" />
