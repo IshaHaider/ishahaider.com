@@ -114,7 +114,7 @@ const Skills = () => (
     
     {/* Soft Skills Section */}
     <div className="container py-8" id="soft-skills">
-      <div className="flex flex-col col-2 items-center justify-center space-x-4 mb-4">
+      <div className="flex flex-col items-center justify-center space-x-4 mb-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ const Skills = () => (
         </motion.h2>
         <p className="text-lg italic">what do I bring to the workplace?</p>
       </div>
-      <div className="grid grid-cols-3 gap-4 px-4 py-2 lg:px-20 text-center ">
+      <div className="grid grid-cols-2 gap-4 px-4 py-2 lg:px-20 text-center ">
         {softSkills.map((skill, index) => (
           <div
             key={index}
