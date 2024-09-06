@@ -75,69 +75,72 @@ const Hero = () => {
               My Current Favorites
             </h2>
             <ul className="space-y-4 text-xl text-center">
-  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
-    <span role="img" aria-label="podcast" className="mr-4 text-2xl">
-      🎙️
-    </span>
-    <span className="font-semibold sm:hidden">Podcast:</span>
-    <span className="hidden sm:inline font-semibold">Podcast:</span>
-    <a
-      href={HERO.podcast}
-      className="text-blue-500"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Can you be too self-aware?
-    </a>
-  </li>
-  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
-    <span role="img" aria-label="book" className="mr-4 text-2xl">
-      📚
-    </span>
-    <span className="font-semibold sm:hidden">Book:</span>
-    <span className="hidden sm:inline font-semibold">Book:</span>
-    <a
-      href={HERO.book}
-      className="text-blue-500"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Look Again: The Power of Noticing What Was Always There
-    </a>
-  </li>
-  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
-    <span role="img" aria-label="puzzle" className="mr-4 text-2xl">
-      🧩
-    </span>
-    <span className="font-semibold sm:hidden">Activity:</span>
-    <span className="hidden sm:inline font-semibold">Activity:</span>
-    <a
-      href={HERO.activity}
-      className="text-blue-500"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Contexto Game
-    </a>
-  </li>
-  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
-    <span role="img" aria-label="food" className="mr-4 text-2xl">
-      🍲
-    </span>
-    <span className="font-semibold sm:hidden">Food:</span>
-    <span className="hidden sm:inline font-semibold">Food:</span>
-    <span>{HERO.food}</span>
-  </li>
-  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
-    <span role="img" aria-label="code" className="mr-4 text-2xl">
-      💻
-    </span>
-    <span className="font-semibold sm:hidden">Languages:</span>
-    <span className="hidden sm:inline font-semibold">Languages:</span>
-    <p>{HERO.languages.join(", ")}</p>
-  </li>
-</ul>
-
+              <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+                <span role="img" aria-label="podcast" className="mr-4 text-2xl">
+                  🎙️
+                </span>
+                <span className="font-semibold sm:hidden">Podcast:</span>
+                <span className="hidden sm:inline font-semibold">Podcast:</span>
+                <a
+                  href={HERO.podcast}
+                  className="text-blue-500 text-center sm:text-left"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Can you be too self-aware?
+                </a>
+              </li>
+              <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+                <span role="img" aria-label="book" className="mr-4 text-2xl">
+                  📚
+                </span>
+                <span className="font-semibold sm:hidden">Book:</span>
+                <span className="hidden sm:inline font-semibold">Book:</span>
+                <a
+                  href={HERO.book}
+                  className="text-blue-500 text-center sm:text-left"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Look Again: The Power of Noticing What Was Always There
+                </a>
+              </li>
+              <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+                <span role="img" aria-label="puzzle" className="mr-4 text-2xl">
+                  🧩
+                </span>
+                <span className="font-semibold sm:hidden">Activity:</span>
+                <span className="hidden sm:inline font-semibold">
+                  Activity:
+                </span>
+                <a
+                  href={HERO.activity}
+                  className="text-blue-500 text-center sm:text-left"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contexto Game
+                </a>
+              </li>
+              <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+                <span role="img" aria-label="food" className="mr-4 text-2xl">
+                  🍲
+                </span>
+                <span className="font-semibold sm:hidden">Food:</span>
+                <span className="hidden sm:inline font-semibold">Food:</span>
+                <span className="text-center sm:text-left">{HERO.food}</span>
+              </li>
+              <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+                <span role="img" aria-label="code" className="mr-4 text-2xl">
+                  💻
+                </span>
+                <span className="font-semibold sm:hidden">Languages:</span>
+                <span className="hidden sm:inline font-semibold">
+                  Languages:
+                </span>
+                <p className="text-center sm:text-left">{HERO.languages.join(", ")}</p>
+              </li>
+            </ul>
           </div>
         </div>
       </motion.div>
