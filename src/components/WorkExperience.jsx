@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";
 import { MdDoubleArrow } from "react-icons/md";
+import { useMediaQuery } from "react-responsive"; // Import the hook
 import "../index.css";
 
 const linkify = (text) => {
@@ -28,6 +29,9 @@ const WorkExperience = () => {
   const [visibleDescriptions, setVisibleDescriptions] = useState(
     Array(EXPERIENCES.length).fill(false)
   );
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+  const isExtraSmallScreen = useMediaQuery({ query: '(max-width: 550px)' });
+
 
   const toggleDescriptionVisibility = (index) => {
     setVisibleDescriptions((prev) =>
@@ -47,7 +51,8 @@ const WorkExperience = () => {
           Work Experience
         </h2>
       </motion.div>
-      <div className="relative">
+      
+      <div className={`flex relative br ${isSmallScreen ? isExtraSmallScreen ? 'w-[480px]' : 'w-[600px]' : ''} ${isExtraSmallScreen ? '-left-16' : ''} `}>
         {/* Timeline line */}
         <div className="absolute top-0 sm:left-20 left-28 w-1 bg-gray-400 h-full"></div>{" "}
         <motion.div
@@ -59,7 +64,7 @@ const WorkExperience = () => {
           {EXPERIENCES.map((experience, index) => (
             <div key={index} className="flex items-start mb-8 relative ">
               {/* Timeline circle and label */}
-              <div className="absolute md:-left-6 left-4 flex flex-col items-center">
+              <div className={`absolute ${isSmallScreen ? (isExtraSmallScreen ? 'left-4' : '-left-3') : '-left-6'} flex flex-col items-center`}>
                 <div className="w-16 h-16  md:w-20 md:h-20 rounded-full bg-gray-800 border-2 border-white z-10 flex items-center justify-center overflow-hidden">
                   {experience.icon}
                 </div>
