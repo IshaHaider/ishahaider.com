@@ -41,9 +41,9 @@ const Education = () => {
               {education.awards.map((award, index) => (
                 <li
                   key={index}
-                  className="flex items-center justify-center text-center space-x-2 mt-2"
-                >
-                  <FaTrophy className="text-yellow-500" /> {/* Trophy icon */}
+                  className="flex break-all justify-center text-center space-x-2 mt-2">
+                  <FaTrophy className="text-yellow-500 pt-1 text-lg flex-shrink-0" />{" "}
+                  {/* Trophy icon */}
                   <span>{award}</span>
                 </li>
               ))}
@@ -53,15 +53,15 @@ const Education = () => {
             <strong>Global Experience: </strong>
             <p>{education.experiences}</p>
           </p>
-          <div className="flex mt-8 justify-center">
-            <div className="bg-cyan-950 max-w-4xl rounded-lg p-8 text-center">
-              <p className="text-xl font-open-sans pb-2">
+          <div className="flex justify-center mt-8">
+            <div className="bg-cyan-950 max-w-4xl rounded-lg p-8">
+              <p className="text-xl font-open-sans pb-2 text-center">
                 <strong>Significant Classes:</strong>
               </p>
-              <div className="flex flex-col text-lg pl-4 font-open-sans items-center">
+              <div className="flex flex-col text-lg pl-4 font-open-sans text-left">
                 {education.classes.map((className, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <MdArrowOutward className="text-stone-300 " />
+                  <div key={index} className="flex space-x-2">
+                    <MdArrowOutward className="text-stone-300 mt-2 flex-shrink-0" />
                     <span className="pl-2">{className}</span>
                   </div>
                 ))}

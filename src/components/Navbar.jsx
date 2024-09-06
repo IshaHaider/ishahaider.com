@@ -11,7 +11,12 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (!isMobileMenuOpen) {
+      setActiveLink("");
+    }
   };
+
+  const [activeLink, setActiveLink] = useState(""); // Track the active link
 
   const handleLinkClick = (e, href) => {
     e.preventDefault();
@@ -31,6 +36,8 @@ const Navbar = () => {
         window.history.pushState(null, null, href);
       }, 300); // Adjust the timeout duration to match the scroll duration
 
+      // Set the active link to the one that was clicked
+      setActiveLink(href);
       setIsMobileMenuOpen(false);
     }
   };
@@ -108,55 +115,77 @@ const Navbar = () => {
       )}
 
       {/* Mobile Menu */}
-{isMobile && (
-  <div className="relative">
-    {/* NavBar Icon */}
-    <div className="fixed top-0 left-0 right-0 backdrop-blur-lg shadow-md z-50 flex items-center justify-between">
-      <div className="flex items-center">
-        <a href="/#">
-          <img src={logo} width={100} alt="logo" />
-        </a>
-      </div>
-      <div className="absolute right-4 top-4"> {/* Ensures button is at top-right */}
-        {/* Single button to toggle the side menu */}
-        <button
-          className="focus:outline-none h-6 w-6 text-white"
-          onClick={toggleMobileMenu}
-        >
-          {isMobileMenuOpen ? (
-            <FaTimes className="h-6 w-6" />
-          ) : (
-            <FaBars className="h-6 w-6" />
-          )}
-        </button>
-      </div>
-    </div>
+      {isMobile && (
+        <div className="relative">
+          {/* NavBar Icon */}
+          <div className="fixed top-0 left-0 right-0 backdrop-blur-lg shadow-md z-50 flex items-center justify-between">
+            <div className="flex items-center">
+              <a href="/#">
+                <img src={logo} width={100} alt="logo" />
+              </a>
+            </div>
+            <div
+              className={`absolute top-6 ${
+                isMobileMenuOpen
+                  ? "left-[47%] transform -translate-x-1/2"
+                  : "right-4"
+              }`}
+            >
+              {" "}
+              {/* Ensures button is at top-right */}
+              {/* Single button to toggle the side menu */}
+              <button
+                className="focus:outline-none h-6 w-6 text-white"
+                onClick={toggleMobileMenu}
+              >
+                {isMobileMenuOpen ? (
+                  <FaTimes className="h-6 w-6" />
+                ) : (
+                  <FaBars className="h-6 w-6" />
+                )}
+              </button>
+            </div>
+          </div>
 
-    {/* Side Panel */}
-    {isMobileMenuOpen && (
-      <nav className="fixed top-0 right-0 h-full w-1/2 bg-sky-950 shadow-lg z-50 p-4 flex flex-col rounded-l-lg">
-        <div className="overflow-y-auto">
-          <ul className="flex flex-col gap-4">
-            {NAVIGATION_LINKS.map((item, index) => (
-              <li key={index}>
-                <Link to={item.href}>
+          {/* Side Panel */}
+          {isMobileMenuOpen && (
+            <nav className="fixed top-0 right-0 h-full w-1/2 bg-sky-950 shadow-lg z-50 p-4 flex flex-col rounded-l-lg">
+              <div className="overflow-y-auto">
+                <ul className="flex flex-col gap-6 mt-2">
+                  {NAVIGATION_LINKS.map((item, index) => (
+                    <li key={index}>
+                      <Link to={item.href}>
+                        <a
+                          className={`block text-lg font-semibold p-2 rounded ${
+                            activeLink === item.href
+                              ? "text-black bg-gray-300"
+                              : "text-white"
+                          } hover:bg-gray-300 hover:text-black`}
+                          href={item.href}
+                          onClick={(e) => handleLinkClick(e, item.href)}
+                        >
+                          {item.label}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
                   <a
-                    className="block text-lg font-semibold text-white hover:text-black hover:bg-gray-300 p-2 rounded"
-                    href={item.href}
-                    onClick={(e) => handleLinkClick(e, item.href)}
+                    href="https://drive.google.com/file/d/1e0ZKHyKitcu-aCrZYiPcgTGkKWbAwFTV/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative inline-block bottom-0"
                   >
-                    {item.label}
+                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
+                      <span>Resume</span>
+                      <MdArrowOutward className="ml-" />
+                    </button>
                   </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                </ul>
+              </div>
+            </nav>
+          )}
         </div>
-      </nav>
-    )}
-  </div>
-)}
-
+      )}
     </>
   );
 };
