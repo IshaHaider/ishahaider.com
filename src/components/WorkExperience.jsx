@@ -29,6 +29,9 @@ const WorkExperience = () => {
     Array(EXPERIENCES.length).fill(false)
   );
 
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+
+
   const toggleDescriptionVisibility = (index) => {
     setVisibleDescriptions((prev) =>
       prev.map((isVisible, i) => (i === index ? !isVisible : isVisible))
@@ -47,7 +50,7 @@ const WorkExperience = () => {
           Work Experience
         </h2>
       </motion.div>
-      <div className="relative">
+      <div className={`relative ${isSmallScreen ? 'max-w-xl' : ''}`}>
         {/* Timeline line */}
         <div className="absolute top-0 sm:left-20 left-28 w-1 bg-gray-400 h-full"></div>{" "}
         <motion.div
