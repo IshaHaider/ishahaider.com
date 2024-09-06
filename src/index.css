@@ -5,9 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  outline: 1px solid red; /* Outlines all elements */
+}
+
 html, body {
   height: 100%;
   margin: 0;
+  /* padding: 0; */
+  overflow-x: hidden;
 }
 
 body {
@@ -15,6 +21,8 @@ body {
   background-color: black;
   color: white;
   letter-spacing: 2.5px;
+  background-size: cover; /* Ensures background fits within the screen */
+  background-repeat: no-repeat; /* Avoids any tiling */
 }
 
 .bg-img::before {
@@ -26,6 +34,7 @@ body {
   background-position: center;
   opacity: 0.4; /* Adjust opacity */
   z-index: -1; /* Stay behind content */
+  /* max-width: screen; */
 }
 
 /* .bg-img {
