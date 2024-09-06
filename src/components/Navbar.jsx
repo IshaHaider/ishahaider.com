@@ -108,59 +108,55 @@ const Navbar = () => {
       )}
 
       {/* Mobile Menu */}
-      {isMobile && (
-        <div className="flex items-center justify-between fixed top-0 left-0 right-0 p-4 backdrop-blur-lg shadow-md z-50">
-          {/* Logo & Resume */}
-          <div className="flex flex-col flex-shrink-0 items-center">
-            <a href="/#">
-              <img src={logo} width={100} alt="logo" />
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1e0ZKHyKitcu-aCrZYiPcgTGkKWbAwFTV/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block pt-2"
-            >
-              <button className="flex items-center text-sm p-2 border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
-                <span>Resume</span>
-                <MdArrowOutward className="ml-2" />
-              </button>
-            </a>
-          </div>
-          {/* NavBar DropDown */}
-          {isMobileMenuOpen && (
-            <nav className="absolute right-16 top-4 w-5/12 mt-2 rounded-lg backdrop-blur-lg bg-white/50 shadow-lg z-100">
-              <div className="ml-4 max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-200">
-                <ul className="flex flex-col gap-2 py-4 pr-4">
-                  {NAVIGATION_LINKS.map((item, index) => (
-                    <li key={index}>
-                      <Link to={item.href}>
-                        <a
-                          className=" block w-full text-lg pl-4 font-semibold hover:text-black hover:bg-white/50 hover:shadow-lg hover:rounded-lg"
-                          href={item.href}
-                          onClick={(e) => handleLinkClick(e, item.href)}
-                        >
-                          {item.label}
-                        </a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </nav>
+{isMobile && (
+  <div className="relative">
+    {/* NavBar Icon */}
+    <div className="fixed top-0 left-0 right-0 backdrop-blur-lg shadow-md z-50 flex items-center justify-between">
+      <div className="flex items-center">
+        <a href="/#">
+          <img src={logo} width={100} alt="logo" />
+        </a>
+      </div>
+      <div className="absolute right-4 top-4"> {/* Ensures button is at top-right */}
+        {/* Single button to toggle the side menu */}
+        <button
+          className="focus:outline-none h-6 w-6 text-white"
+          onClick={toggleMobileMenu}
+        >
+          {isMobileMenuOpen ? (
+            <FaTimes className="h-6 w-6" />
+          ) : (
+            <FaBars className="h-6 w-6" />
           )}
-          {/* NavBar Icon*/}
-          <div className="relative flex items-center">
-            <button className="focus:outline-none" onClick={toggleMobileMenu}>
-              {isMobileMenuOpen ? (
-                <FaTimes className="m-2 h-6 w-5" />
-              ) : (
-                <FaBars className="m-2 h-6 w-5" />
-              )}
-            </button>
-          </div>
+        </button>
+      </div>
+    </div>
+
+    {/* Side Panel */}
+    {isMobileMenuOpen && (
+      <nav className="fixed top-0 right-0 h-full w-1/2 bg-sky-950 shadow-lg z-50 p-4 flex flex-col rounded-l-lg">
+        <div className="overflow-y-auto">
+          <ul className="flex flex-col gap-4">
+            {NAVIGATION_LINKS.map((item, index) => (
+              <li key={index}>
+                <Link to={item.href}>
+                  <a
+                    className="block text-lg font-semibold text-white hover:text-black hover:bg-gray-300 p-2 rounded"
+                    href={item.href}
+                    onClick={(e) => handleLinkClick(e, item.href)}
+                  >
+                    {item.label}
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+      </nav>
+    )}
+  </div>
+)}
+
     </>
   );
 };

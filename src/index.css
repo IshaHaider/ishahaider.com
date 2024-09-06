@@ -5,6 +5,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-outline {
+  color: white; /* Set the text color */
+  text-shadow: 
+    1px 1px 0 #000, /* Right bottom */
+    -1px -1px 0 #000, /* Left top */
+    1px -1px 0 #000, /* Right top */
+    -1px 1px 0 #000; /* Left bottom */
+}
+
 html, body {
   height: 100%;
   margin: 0;

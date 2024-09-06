@@ -7,18 +7,18 @@ import SolarCar from "../assets/solar-car.png";
 import SCRP from "../assets/scrp.png";
 import Schulich from "../assets/schulich.jpg";
 
-import projectImage1 from "../assets/project1.jpeg";
-import projectImage2 from "../assets/project2.jpeg";
-import projectImage3 from "../assets/project3.jpeg";
-import projectImage4 from "../assets/project4.jpeg";
-import projectImage5 from "../assets/project5.jpeg";
-import projectImage6 from "../assets/project6.jpeg";
-
 import { RiReactjsLine } from "react-icons/ri";
 import { BiLogoPostgresql, BiLogoGoogleCloud } from "react-icons/bi";
 import { IoLogoJavascript } from "react-icons/io";
 import { FiFigma } from "react-icons/fi";
 import { CgCPlusPlus } from "react-icons/cg";
+
+import { FaMusic, FaGlasses, FaGamepad, FaLightbulb, FaPlane, FaRobot, FaGlobe, FaUniversity, FaBook, FaCalendarAlt } from 'react-icons/fa';
+import { SiNintendogamecube } from "react-icons/si";
+import { FiCpu } from "react-icons/fi";
+import { GiDeathNote } from "react-icons/gi";
+import { FaAmericanSignLanguageInterpreting } from "react-icons/fa";
+
 
 import {
   FaNodeJs,
@@ -65,7 +65,6 @@ export const HERO = {
   greet: "Welcome to My Corner of the Web!",
   description:
     "As a software engineer, I thrive on solving problems and creating impactful solutions. I’m passionate about coding and always eager to learn and improve. Off the laptop, I enjoy mind games, coffee, keeping things tidy, exploring nature, and trying new experiences. Balancing creativity and curiosity drives me both in and out of work.",
-  song: "https://www.youtube.com/watch?v=5qap5aO4i9A",
   podcast: "https://www.youtube.com/watch?v=5qap5aO4i9A",
   book: "https://www.youtube.com/watch?v=5qap5aO4i9A",
   activity: "https://www.youtube.com/watch?v=5qap5aO4i9A",
@@ -369,7 +368,7 @@ export const PROJECTS = [
     class: "SENG401",
     description:
       "Rycho is an audio-sharing social media application for music and podcast enthusiasts, designed to create a vibrant community where users can discover, share, and engage with personalized content, leveraging features like customized playlists, song recommendations, and real-time interaction.",
-    image: projectImage6,
+    image: <FaMusic />,
     githubLink: "https://github.com/IshaHaider/Rycho",
     languages: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express", "AWS", "Spotify API", "Google Cloud", "CSS"],
   },
@@ -379,7 +378,7 @@ export const PROJECTS = [
     class: "Personal",
     description:
       "Developing advanced smart glasses that will produce scenic descriptions and real-time navigation through the utilization of computer vision and audio description. They will enhance scene understanding with CNNs (ResNet) and integrate Detectron2 for semantic segmentation and object recognition. This will work with rule-based systems to deliver directional audio cues via text-to-speech, improving accessibility and situational awareness.",
-    image: projectImage1,
+    image: <FaGlasses />,
     githubLink: "",
     languages: ["Embedded", "CNNs (ResNet)", "Detectron2"],
   },
@@ -389,7 +388,7 @@ export const PROJECTS = [
     class: "Personal",
     description:
       "Developed a Tetris game in C++ using OOP principles, focusing on modularity and maintainability. Implemented core mechanics like piece rotation, collision detection, line clearing, and a scoring system. Utilized SFML for GUI design, rendering game elements, managing user input, and handling real-time game logic.",
-    image: projectImage2,
+    image: <SiNintendogamecube/>,
     githubLink: "https://github.com/IshaHaider/Tetris",
     languages: ["C++", "SFML", "OOP"],
   },
@@ -399,7 +398,7 @@ export const PROJECTS = [
     class: "ENSF460",
     description:
       "Employed the PIC24F16K101 microcontroller for the precise control of LED brightness or intensity, connected to pin 12, and presented the results using Python in Spyder. The application integrates push buttons linked to input ports RA2, RA4, and RB4, utilizing UART and Timer peripherals within the MPLAB IDE to capture voltages and regulate LED delays.",
-    image: projectImage3,
+    image: <FiCpu/>,
     githubLink: "https://youtu.be/IP5TtW9Qeco",
     languages: ["Python", "MPLAB X", "PIC24F16K101", "UART", "Embedded"],
   },
@@ -409,27 +408,27 @@ export const PROJECTS = [
     class: "ENSF480",
     description:
       "A Java-based web application developed with MySQL and Maven for a single airline company. It enables users and agents to browse, select, and manage flights, seats, and insurance. Registered users enjoy perks, and airline agents/admins can handle various management tasks. The project prioritizes systematic design and may see evolving requirements during development.",
-    image: projectImage4,
+    image: <FaPlane />,
     githubLink: "https://github.com/IshaHaider/FlightSimulator",
     languages: ["Java", "MySQL", "Maven", "Databases", "OOP", "MVC"],
   },
   {
     id: 5,
-    name: "Obituary-AI Web Application",
+    name: "Obituary-AI Application",
     class: "ENSF381",
     description:
       "A React.js application that utilizes ChatGPT API for profile generation, Amazon Polly for speech synthesis, and Cloudinary API for storage. AWS services such as DynamoDB and Lambda handle backend data management and serverless functions, respectively. Python is employed for scripting, and infrastructure provisioning is managed through Terraform.",
-    image: projectImage5,
+    image: <GiDeathNote />,
     githubLink: "https://github.com/IshaHaider/Obituary-AI",
     languages: ["React", "ChatGPT API", "Amazon Polly", "Cloudinary API", "AWS", "Terraform", "DynamoDB"],
   },
   {
     id: 6,
-    name: "Country Statistics Terminal App",
+    name: "Country Stats Terminal App",
     class: "ENDG233",
     description:
       "A terminal-based Python application to process and plot data from CSV files based on user input. Utilized NumPy for data manipulation and Matplotlib for visualizations, enabling efficient data selection, processing, and graphical display.",
-    image: projectImage6,
+    image: <FaGlobe />,
     githubLink: "https://github.com/IshaHaider/Country-Statistics",
     languages: ["Python", "NumPy", "Matplotlib"],
   },
@@ -439,17 +438,17 @@ export const PROJECTS = [
     class: "ENSF300",
     description:
       "A Python application that connects to a MySQL database for maintenance, data entry, and browsing. It includes an admin interface for executing SQL commands, a data entry interface for managing records with user-friendly prompts, and a browsing interface for guided database exploration. User roles and access levels are determined through login credentials.",
-    image: projectImage6,
+    image: <FaUniversity />,
     githubLink: "https://github.com/IshaHaider/Museum-Project",
     languages: ["Python", "MySQL", "Databases", "OOP", "MVC"],
   },
   {
     id: 8,
-    name: "Common Data Structures Library",
+    name: "Data Structures Lib",
     class: "ENSF338",
     description:
       "The project involves creating a Java library called 'myLib' for common data structures, organized into a modular package. It includes linear data structures, tree structures, heaps, and graph algorithms, all designed for integers. The library will be tested using a main app or JUnit tests, with an option to support generic data types for extra credit.",
-    image: projectImage6,
+    image: <FaBook />,
     githubLink: "https://github.com/IshaHaider/Common-Data-Structures-Library",
     languages: ["Java", "Data Structures", "Algorithms", "OOP", "MVC", "JUnit"],
   },
@@ -459,7 +458,7 @@ export const PROJECTS = [
     class: "ENSF380",
     description:
       "Ever had to manage a centre of pets that require medicine, certain care, and certain foods given a limited amount of staff? This java program uses a clean GUI and an algorithm to sort through a database to create the perfect schedule to account for all pet needs.",
-    image: projectImage6,
+    image: <FaCalendarAlt />,
     githubLink: "https://github.com/IshaHaider/ScheduleBuilder",
     languages: ["Java", "GUI", "Databases", "Algorithms", "OOP", "MVC", "JUnit"],
   },
@@ -469,7 +468,7 @@ export const PROJECTS = [
     class: "Personal (Shopify)",
     description:
       "A small terminal line program that converts braille to english or english to braille",
-    image: projectImage6,
+    image: <FaAmericanSignLanguageInterpreting/>,
     githubLink: "    - [ ] https://github.com/IshaHaider/braille-translator",
     languages: ["Python", "Data Patterns", "Algorithms", "OOP"],
   },
@@ -559,8 +558,8 @@ export const EDUCATION = [
       "Bachelor of Science - Software Engineering Major, Mechatronics Minor",
     institution: "University of Calgary, Canada",
     duration: "August 2021 - June 2026",
-    awards:
-      "Dean's List (x2)  |  NSERC USRA  |  Jason Lang Scholarships (x2)  |  Women in STEM Scholarship  |  Digital Citizenship Graduation Award  |  Diversity Champions in Engineering Award",
+    awards:["Dean's List (x2)", "NSERC USRA", "Jason Lang Scholarship (x2)", "Women in STEM Scholarship", "Digital Citizenship Graduation Award", "Diversity Champions in Engineering Award"],
+      // "Dean's List (x2)  |  NSERC USRA  |  Jason Lang Scholarships (x2)  |  Women in STEM Scholarship  |  Digital Citizenship Graduation Award  |  Diversity Champions in Engineering Award",
     experiences:
       "Participated in a transformative trip to Silicon Valley in Feb'24, alongside 15 students, focusing on valuable networking, leadership development, and career advancement. Interacted with seasoned tech leaders and esteemed research professors, gaining insights into excelling in our careers and recognizing the profound impact we, as aspiring software engineers, can make on the future.",
     classes: ["Data Structures & Algorithms", "Full-Stack Web Development", "Web Principles", "Embedded Systems", "Object-Oriented Programming", "Computer Organization", "Linear Algebra", "Digital Circuits", "Digital Logic", "Statistics and Machine Learning", "Databases", "Networks", "Operating Systems", "Software Testing", "Mathematics"],
