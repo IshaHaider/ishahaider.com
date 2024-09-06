@@ -469,7 +469,7 @@ export const PROJECTS = [
     description:
       "A small terminal line program that converts braille to english or english to braille",
     image: <FaAmericanSignLanguageInterpreting/>,
-    githubLink: "    - [ ] https://github.com/IshaHaider/braille-translator",
+    githubLink: "https://github.com/IshaHaider/braille-translator",
     languages: ["Python", "Data Patterns", "Algorithms", "OOP"],
   },
 ];
