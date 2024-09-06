@@ -29,8 +29,8 @@ const WorkExperience = () => {
   const [visibleDescriptions, setVisibleDescriptions] = useState(
     Array(EXPERIENCES.length).fill(false)
   );
-  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
-  const isExtraSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 500px)' });
+  const isExtraSmallScreen = useMediaQuery({ query: '(max-width: 415px)' });
 
 
   const toggleDescriptionVisibility = (index) => {
@@ -40,7 +40,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <section className="py-8" id="work">
+    <section className={`py-8 overflow-hidden ${isSmallScreen ? isExtraSmallScreen ? 'max-w-[400px]' : 'w-[475px]' : ''}`} id="work">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const WorkExperience = () => {
         </h2>
       </motion.div>
       
-      <div className={`flex relative br ${isSmallScreen ? isExtraSmallScreen ? 'w-[400px] items-center justify-center -left-16' : 'w-[500px]' : ''}`}>
+      <div className={`flex relative break-all`}>
         {/* Timeline line */}
         <div className={`absolute top-0 ${isSmallScreen ? (isExtraSmallScreen ? 'hidden' : 'left-20') : 'left-28'} w-1 bg-gray-400 h-full`}></div>{" "}
         <motion.div
@@ -64,7 +64,7 @@ const WorkExperience = () => {
           {EXPERIENCES.map((experience, index) => (
             <div key={index} className="flex items-start mb-8 relative ">
               {/* Timeline circle and label */}
-              <div className={`absolute ${isSmallScreen ? (isExtraSmallScreen ? 'hidden' : '-left-3') : '-left-6'} flex flex-col items-center`}>
+              <div className={`absolute ${isSmallScreen ? (isExtraSmallScreen ? 'hidden' : '-left-3') : 'left-3'} flex flex-col items-center`}>
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-800 border-2 border-white z-10 flex items-center justify-center overflow-hidden">
                   {experience.icon}
                 </div>
