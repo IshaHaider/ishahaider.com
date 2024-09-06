@@ -101,13 +101,16 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 1.3rem;
+  /* width: 1.3rem; */
+  width: 0.5rem;
+  
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background: #797979;
   transition: all 0.5s ease-in-out;
+  border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -116,6 +119,7 @@ html {
 
 ::-webkit-scrollbar-track {
   background: #f9f9f9;
+  border-radius: 1rem;
 }
 
 /* body {
