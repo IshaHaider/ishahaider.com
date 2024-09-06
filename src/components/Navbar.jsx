@@ -178,7 +178,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="relative inline-block bottom-0"
                   >
-                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:white hover:text-black">
+                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-gray-300 hover:text-black">
                       <span>Resume</span>
                       <MdArrowOutward className="ml-" />
                     </button>
