@@ -74,40 +74,70 @@ const Hero = () => {
             <h2 className="text-2xl font-bold text-center mb-6">
               My Current Favorites
             </h2>
-            <ul className="space-y-4 text-xl">
-              <li className="flex items-center">
-                <span role="img" aria-label="podcast" className="mr-4">🎙️</span>
-                Podcast:{" "}
-                <a href={HERO.podcast} className="text-blue-500" target="_blank" rel="noopener noreferrer">
-                  Listen here
-                </a>
-              </li>
-              <li className="flex items-center">
-                <span role="img" aria-label="book" className="mr-4">📚</span>
-                Book:{"  "} 
-                <a href={HERO.book} className="text-blue-500" target="_blank" rel="noopener noreferrer">
-                  Learn more
-                </a>
-              </li>
-              <li className="flex items-center">
-                <span role="img" aria-label="puzzle" className="mr-4">🧩</span>
-                Activity:{" "}
-                <a href={HERO.activity} className="text-blue-500" target="_blank" rel="noopener noreferrer">
-                  Puzzles
-                </a>
-              </li>
-              <li className="flex items-center">
-                <span role="img" aria-label="food" className="mr-4">🍲</span>
-                Food:{" "}
-                <a href={HERO.food} className="text-blue-500" target="_blank" rel="noopener noreferrer">
-                  My favorite dish
-                </a>
-              </li>
-              <li className="flex ">
-                <span role="img" aria-label="code" className="mr-4">💻</span>
-                Languages: {HERO.languages.join(", ")}
-              </li>
-            </ul>
+            <ul className="space-y-4 text-lg text-center">
+  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+    <span role="img" aria-label="podcast" className="mr-4 text-2xl">
+      🎙️
+    </span>
+    <span className="font-semibold sm:hidden">Podcast:</span>
+    <span className="hidden sm:inline font-semibold">Podcast:</span>
+    <a
+      href={HERO.podcast}
+      className="text-blue-500"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Can you be too self-aware?
+    </a>
+  </li>
+  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+    <span role="img" aria-label="book" className="mr-4 text-2xl">
+      📚
+    </span>
+    <span className="font-semibold sm:hidden">Book:</span>
+    <span className="hidden sm:inline font-semibold">Book:</span>
+    <a
+      href={HERO.book}
+      className="text-blue-500"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Look Again: The Power of Noticing What Was Always There
+    </a>
+  </li>
+  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+    <span role="img" aria-label="puzzle" className="mr-4 text-2xl">
+      🧩
+    </span>
+    <span className="font-semibold sm:hidden">Activity:</span>
+    <span className="hidden sm:inline font-semibold">Activity:</span>
+    <a
+      href={HERO.activity}
+      className="text-blue-500"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Contexto Game
+    </a>
+  </li>
+  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+    <span role="img" aria-label="food" className="mr-4 text-2xl">
+      🍲
+    </span>
+    <span className="font-semibold sm:hidden">Food:</span>
+    <span className="hidden sm:inline font-semibold">Food:</span>
+    <span>{HERO.food}</span>
+  </li>
+  <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
+    <span role="img" aria-label="code" className="mr-4 text-2xl">
+      💻
+    </span>
+    <span className="font-semibold sm:hidden">Languages:</span>
+    <span className="hidden sm:inline font-semibold">Languages:</span>
+    <p>{HERO.languages.join(", ")}</p>
+  </li>
+</ul>
+
           </div>
         </div>
       </motion.div>

@@ -65,10 +65,10 @@ export const HERO = {
   greet: "Welcome to My Corner of the Web!",
   description:
     "As a software engineer, I thrive on solving problems and creating impactful solutions. I’m passionate about coding and always eager to learn and improve. Off the laptop, I enjoy mind games, coffee, keeping things tidy, exploring nature, and trying new experiences. Balancing creativity and curiosity drives me both in and out of work.",
-  podcast: "https://www.youtube.com/watch?v=5qap5aO4i9A",
-  book: "https://www.youtube.com/watch?v=5qap5aO4i9A",
-  activity: "https://www.youtube.com/watch?v=5qap5aO4i9A",
-  food: "https://www.youtube.com/watch?v=5qap5aO4i9A",
+  podcast: "https://open.spotify.com/episode/1qazN5UMAiKjGAWDmYIdI1?si=c525489deda24e23",
+  book: "https://www.goodreads.com/book/show/176442617-look-again",
+  activity: "https://contexto.me/",
+  food: "Singaporian Rice",
   languages: ["Java", "C++"],
   };
 
