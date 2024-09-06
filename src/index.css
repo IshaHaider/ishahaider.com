@@ -5,15 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  outline: 1px solid red; /* Outlines all elements */
-}
-
 html, body {
   height: 100%;
   margin: 0;
-  /* padding: 0; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -189,7 +184,7 @@ html {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
   .slider-controler .swiper-button-prev,
   .slider-controler .swiper-button-next {
     display: none; /* Hide arrows on mobile */

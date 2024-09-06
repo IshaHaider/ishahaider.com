@@ -2,6 +2,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive"; // Import the hook
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -12,6 +13,8 @@ import { Navigation, Pagination, EffectCoverflow } from "swiper";
 
 const Projects = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
+
 
   const handleSlideChange = (swiper) => {
     const totalSlides = PROJECTS.length;
@@ -40,7 +43,7 @@ const Projects = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={"auto"}
+          slidesPerView={isSmallScreen ? 1 : "auto"} // Set slidesPerView based on screen size
           coverflowEffect={{
             rotate: 50, //0
             stretch: 0,
@@ -55,34 +58,34 @@ const Projects = () => {
             clickable: true,
           }}
           modules={[Navigation, Pagination, EffectCoverflow]}
-          className="swiper_container "
+          className="swiper_container"
           onSlideChange={handleSlideChange}
         >
           {PROJECTS.map((project) => (
             <SwiperSlide key={project.id}>
-              <div className="relative flex flex-col h-full">
+              <div className="relative flex flex-col h-full items-center">
                 <motion.img
                   whileHover={{ scale: 1.1 }}
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 "
                 />
                 <motion.div
                   initial={{ opacity: 0 }}
-                  animate={{ opacity: activeSlide === project.id ? 1 : 0 }}
+                  animate={{ opacity: (activeSlide === project.id || isSmallScreen) ? 1 : 0 }}
                   transition={{ duration: 0.5 }}
                   className="absolute inset-0 flex flex-col justify-between text-white backdrop-blur-lg transition-opacity duration-500 overflow-auto"
                   style={{ minHeight: "100%" }}
                 >
-                  <div className="flex-1 mt-12">
+                  <div className="flex-1 mt-12 max-w-md overflow-hidden mx-auto">
                     <h3 className="text-4xl text-center font-semibold mb-2 tracking-7px">
                       {project.name}
                     </h3>
-                    <p className="text-xs md:text-sm text-center font-open-sans px-1">
+                    <p className="text-xs md:text-sm text-center font-open-sans px-1 ">
                       {project.description}
                     </p>
                   </div>
-                  <div className="text-center mt-4">
+                  <div className="text-center mt-4 max-w-md mx-auto">
                     {project.githubLink && project.githubLink.trim() !== "" && (
                       <a
                         href={project.githubLink}
