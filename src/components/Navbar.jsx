@@ -10,10 +10,13 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    if (!isMobileMenuOpen) {
-      setActiveLink("");
-    }
+    setIsMobileMenuOpen(prevState => {
+      if (!prevState) {
+        // If the menu is being opened, reset the active link
+        setActiveLink("");
+      }
+      return !prevState; // Toggle the menu state
+    });
   };
 
   const [activeLink, setActiveLink] = useState(""); // Track the active link
@@ -135,13 +138,13 @@ const Navbar = () => {
               {/* Ensures button is at top-right */}
               {/* Single button to toggle the side menu */}
               <button
-                className="focus:outline-none h-6 w-6 text-white"
+                className="focus:outline-none h-10 w-10 text-white"
                 onClick={toggleMobileMenu}
               >
                 {isMobileMenuOpen ? (
-                  <FaTimes className="h-6 w-6" />
+                  <FaTimes className="h-10 w-10" />
                 ) : (
-                  <FaBars className="h-6 w-6" />
+                  <FaBars className="h-10 w-10" />
                 )}
               </button>
             </div>
@@ -175,7 +178,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="relative inline-block bottom-0"
                   >
-                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-purple-500">
+                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:white hover:text-black">
                       <span>Resume</span>
                       <MdArrowOutward className="ml-" />
                     </button>
