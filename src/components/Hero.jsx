@@ -1,7 +1,5 @@
 import { HERO } from "../constants";
-import ishaImg from "../assets/isha.jpeg";
 import { motion } from "framer-motion";
-import { MdArrowOutward } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -77,13 +75,6 @@ const Hero = () => {
               My Current Favorites
             </h2>
             <ul className="space-y-4 text-xl">
-              <li className="flex items-center">
-                <span role="img" aria-label="music" className="mr-4">🎶</span>
-                Song:{" "}
-                <a href={HERO.song} className="text-blue-500" target="_blank" rel="noopener noreferrer">
-                  Listen here
-                </a>
-              </li>
               <li className="flex items-center">
                 <span role="img" aria-label="podcast" className="mr-4">🎙️</span>
                 Podcast:{" "}
