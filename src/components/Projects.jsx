@@ -85,7 +85,7 @@ const Projects = () => {
                       activeSlide === project.id || isSmallScreen ? 1 : 0,
                   }}
                   transition={{ duration: 0.5 }}
-                  className="relative flex flex-col justify-between text-white backdrop-blur-lg transition-opacity duration-500 overflow-auto"
+                  className="relative flex flex-col justify-between text-white transition-opacity duration-500 overflow-auto"
                   style={{ minHeight: "100%", zIndex: 1 }} // Ensures text is above the icon
                 >
                   <div className="flex-1 mt-12 max-w-md overflow-hidden mx-auto">

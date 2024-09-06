@@ -57,7 +57,7 @@ export const NAVIGATION_LINKS = [
   { label: "Experience", href: "#work" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#contact" }
 ];
 
 export const HERO = {
