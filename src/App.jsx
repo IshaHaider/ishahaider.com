@@ -35,8 +35,8 @@ const MainApp = () => {
               <>
                 <Hero />
                 <Skills />
-                <WorkExperience />
                 <Projects />
+                <WorkExperience />
                 <Education />
                 <Contact />
                 <Footer />

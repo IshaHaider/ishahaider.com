@@ -54,8 +54,8 @@ import {
 export const NAVIGATION_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#work" },
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#work" },
   { label: "Education", href: "#education" },
   { label: "Contact", href: "#contact" }
 ];

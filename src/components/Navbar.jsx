@@ -163,7 +163,7 @@ const Navbar = () => {
                             activeLink === item.href
                               ? "text-black bg-gray-300"
                               : "text-white"
-                          } hover:bg-gray-300 hover:text-black`}
+                          } hover:bg-gray-300 hover:text-black focus:bg-gray-300 focus:text-black `}
                           href={item.href}
                           onClick={(e) => handleLinkClick(e, item.href)}
                         >
@@ -178,7 +178,8 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="relative inline-block bottom-0"
                   >
-                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-gray-300 hover:text-black">
+                    <button className="flex items-center p-2.5 lg:text-2xl text-lg border-2 rounded-full bg-transparent text-white hover:bg-gray-300 hover:text-black focus:bg-gray-300 focus:text-black"
+                    >
                       <span>Resume</span>
                       <MdArrowOutward className="ml-" />
                     </button>

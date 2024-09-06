@@ -74,7 +74,7 @@ const Hero = () => {
             <h2 className="text-2xl font-bold text-center mb-6">
               My Current Favorites
             </h2>
-            <ul className="space-y-4 text-lg text-center">
+            <ul className="space-y-4 text-xl text-center">
   <li className="flex flex-col items-center sm:flex-row sm:items-start sm:space-x-4">
     <span role="img" aria-label="podcast" className="mr-4 text-2xl">
       🎙️
