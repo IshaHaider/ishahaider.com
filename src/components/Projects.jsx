@@ -58,7 +58,7 @@ const Projects = () => {
             clickable: true,
           }}
           modules={[Navigation, Pagination, EffectCoverflow]}
-          className="swiper_container"
+          className={`swiper_container ${isSmallScreen ? 'max-w-xl' : ''}`}
           onSlideChange={handleSlideChange}
         >
           {PROJECTS.map((project) => (
