@@ -88,13 +88,10 @@ const Projects = () => {
                   className="relative flex flex-col justify-between text-white transition-opacity duration-500 overflow-auto"
                   style={{ minHeight: "100%", zIndex: 1 }} // Ensures text is above the icon
                 >
-                  <div className="flex-1 mt-12 max-w-md overflow-hidden mx-auto">
+                  <div className="flex-1 mt-12 max-w-md mx-auto max-h-1/2 overflow-y-auto ">
                     <h3 className="text-4xl text-center font-semibold mb-2 tracking-7px">
                       {project.name}
                     </h3>
-                    {/* <p className="text-xs md:text-sm text-center font-open-sans px-1">
-                      {project.description}
-                    </p> */}
                     <p className="text-xs font-bold md:text-sm text-center font-open-sans px-1 text-outline">
                       {project.description}
                     </p>
