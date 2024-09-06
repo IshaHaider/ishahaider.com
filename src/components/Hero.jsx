@@ -33,7 +33,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
-        className="w-full md:w-1/2 pr-4 mb-8"
+        className="w-full md:w-1/2 md:pr-4 mb-8"
       >
         <h2
           className=" p-2 text-5xl font-bold lg:text-[7rem] md:text-left text-center"
