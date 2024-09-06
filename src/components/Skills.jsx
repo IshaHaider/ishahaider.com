@@ -114,7 +114,7 @@ const Skills = () => (
     
     {/* Soft Skills Section */}
     <div className="container py-8" id="soft-skills">
-      <div className="flex flex-col col-3 items-center justify-center space-x-4 mb-4">
+      <div className="flex flex-col col-2 items-center justify-center space-x-4 mb-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
