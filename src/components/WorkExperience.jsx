@@ -30,7 +30,7 @@ const WorkExperience = () => {
     Array(EXPERIENCES.length).fill(false)
   );
   const isSmallScreen = useMediaQuery({ query: '(max-width: 768px)' });
-  const isExtraSmallScreen = useMediaQuery({ query: '(max-width: 550px)' });
+  const isExtraSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
 
 
   const toggleDescriptionVisibility = (index) => {
@@ -52,20 +52,20 @@ const WorkExperience = () => {
         </h2>
       </motion.div>
       
-      <div className={`flex relative br ${isSmallScreen ? isExtraSmallScreen ? 'w-[480px]' : 'w-[600px]' : ''} ${isExtraSmallScreen ? '-left-16' : ''} `}>
+      <div className={`flex relative br ${isSmallScreen ? isExtraSmallScreen ? 'w-[400px] items-center justify-center -left-16' : 'w-[500px]' : ''}`}>
         {/* Timeline line */}
-        <div className="absolute top-0 sm:left-20 left-28 w-1 bg-gray-400 h-full"></div>{" "}
+        <div className={`absolute top-0 ${isSmallScreen ? (isExtraSmallScreen ? 'hidden' : 'left-20') : 'left-28'} w-1 bg-gray-400 h-full`}></div>{" "}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="space-y-8 p-10 pl-16" // Added padding-left to make room for the timeline
+          className={`space-y-8 ${isExtraSmallScreen ? "p-4": "p-10 pl-16"}`} // Added padding-left to make room for the timeline
         >
           {EXPERIENCES.map((experience, index) => (
             <div key={index} className="flex items-start mb-8 relative ">
               {/* Timeline circle and label */}
-              <div className={`absolute ${isSmallScreen ? (isExtraSmallScreen ? 'left-4' : '-left-3') : '-left-6'} flex flex-col items-center`}>
-                <div className="w-16 h-16  md:w-20 md:h-20 rounded-full bg-gray-800 border-2 border-white z-10 flex items-center justify-center overflow-hidden">
+              <div className={`absolute ${isSmallScreen ? (isExtraSmallScreen ? 'hidden' : '-left-3') : '-left-6'} flex flex-col items-center`}>
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gray-800 border-2 border-white z-10 flex items-center justify-center overflow-hidden">
                   {experience.icon}
                 </div>
               </div>
@@ -75,11 +75,11 @@ const WorkExperience = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: index * 0.2 }}
-                className="ml-24 rounded-xl border border-stone-50/30 bg-white/10 p-4 w-full lg:max-w-7xl"
+                className={`${isExtraSmallScreen ? "":"ml-24"}  rounded-xl border border-stone-50/30 bg-white/10 p-4 w-full lg:max-w-7xl`}
               >
                 <div className="relative flex flex-col">
                   {/* Small dash arrow */}
-                  <div className="absolute left-[-18px] transform translate-y-1/4">
+                  <div className={`absolute ${isExtraSmallScreen ? "hidden":"left-[-18px]"} transform translate-y-1/4`}>
                     <div className="w-4 h-4 border-t-2 border-r-2  border-white/30 rotate-[225deg]"></div>
                   </div>
                   <h3 className="text-2xl md:text-3xl font-light">{experience.title}</h3>
