@@ -159,7 +159,10 @@ const Navbar = () => {
                     <li key={index}>
                       <Link to={item.href}>
                         <a
-                          className={`block text-lg font-semibold p-2 rounded "text-white" 
+                          className={`block text-lg font-semibold p-2 rounded  ${
+                            activeLink === item.href
+                              ? "text-black bg-gray-300"
+                              : "text-white"
                           } hover:bg-gray-300 hover:text-black`}
                           href={item.href}
                           onClick={(e) => handleLinkClick(e, item.href)}
