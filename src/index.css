@@ -130,6 +130,8 @@ html {
   height: 52rem;
   padding: 2rem 0;
   position: relative;
+  min-height: 300px; /* Adjust based on your layout */
+  width: 100%;
 }
 
 .swiper-slide {
@@ -138,7 +140,7 @@ html {
   position: relative;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .swiper_container {
     height: 47rem;
   }
@@ -149,6 +151,23 @@ html {
   .swiper-slide img {
     width: 28rem !important;
     height: 36rem !important;
+  }
+} */
+
+@media (max-width: 500px) {
+  .swiper_container {
+    height: auto; /* Allow height to adjust based on content */
+  }
+  .swiper-slide {
+    width: 100%; /* Allow the slide to take full width */
+    height: auto; /* Let height adjust based on content */
+  }
+  .swiper-slide img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .swiper-pagination {
+    top: 2.5rem; /* Adjust pagination position */
   }
 }
 

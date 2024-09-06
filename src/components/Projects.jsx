@@ -45,10 +45,10 @@ const Projects = () => {
           loop={true}
           slidesPerView={isSmallScreen ? 1 : "auto"} // Set slidesPerView based on screen size
           coverflowEffect={{
-            rotate: 50, //0
+            rotate: isSmallScreen ? 0 : 50,
             stretch: 0,
-            depth: 100,
-            modifier: 2.5,
+            depth: isSmallScreen ? 50 : 100,
+            modifier: isSmallScreen ? 1 : 2.5,
             slideShadows: true,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
