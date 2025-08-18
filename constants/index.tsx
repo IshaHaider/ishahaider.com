@@ -226,7 +226,7 @@ export const EXPERIENCES = [
     startDate: "May 2025",
     endDate: "August 2025",
     period: "May 2025 - August 2025",
-    description: "Developed and maintained web applications using React, TypeScript, and Node.js.",
+    description: "Wealth Management - UPE Platform 💸",
     skills: ["Java", "SQL", "GWT"],
     achievements: [
       "Updated legacy Java and SQL systems as part of the conversion of 2 large enterprise platforms, contributing to the successful transition of 9M+ user accounts.",
@@ -249,7 +249,7 @@ export const EXPERIENCES = [
     startDate: "Jan 2025",
     endDate: "May 2025",
     period: "Jan 2025 - May 2025",
-    description: "Built responsive web interfaces and implemented UI/UX designs.",
+    description: "Agentic AI in SDLC 🤖",
     skills: ["GenAI", "Python", "AI Agents", "Microsoft Autogen", "Flowise", "LLMs"],
     achievements: [
       "Led the end-to-end integration of AI agents into the SDLC for a U.S. bank's mobile application, reducing human intervention by 80%. Designed, developed, and deployed 5 AI agents to automate code generation, bug detection, and deployment processes.",
@@ -273,7 +273,7 @@ export const EXPERIENCES = [
     startDate: "May 2024",
     endDate: "Dec 2024",
     period: "May 2024 - Dec 2024",
-    description: "Assisted in developing features for a web application.",
+    description: "Manage and visualize pipeline data 📊",
     skills: ["CDK", "AWS", "PostgreSQL", "Python", "PowerBI", "Azure"],
     achievements: [
       "Developed a tool that can compare data between 2 or more environments coming from over 10 schemas and 1,000 tuples, ensuring it is identical and reporting all discrepancies. This tool automated 40% of the QAs testing methods.",
@@ -296,7 +296,7 @@ export const EXPERIENCES = [
     startDate: "Sep 2021",
     endDate: "May 2024",
     period: "Sep 2021 - May 2024",
-    description: "Assisted in developing features for a web application.",
+    description: "International Education Initiative 📚",
     skills: ["React", "JavaScript", "Tailwind CSS", "CSS", "Node.js", "HTML", "Supabase", "PostgreSQL"],
     achievements: [
       "Publicized the global organization from scratch and registered over 200 students and volunteers from 5 countries by recruiting and leading effective marketing, internal/external affairs, volunteer/student coordinating, country ambassadors, and finance teams",
@@ -320,7 +320,7 @@ export const EXPERIENCES = [
     startDate: "Dec 2022",
     endDate: "May 2024",
     period: "Dec 2022 - May 2024",
-    description: "Assisted in developing features for a web application.",
+    description: "Telemetry Data Management 📡",
     skills: ["React", "TypeScript", "Figma", "Node.js", "Tailwind CSS", "Angular", "JIRA", "Agile/Scrum", "JavaScript", "HTML", "CSS"],
     achievements: [
       "Enhanced the existing data analysis algorithm to be more modular, repeatable, and adaptable to changes.",
@@ -345,7 +345,7 @@ export const EXPERIENCES = [
     startDate: "May 2023",
     endDate: "Aug 2023",
     period: "May 2023 - Aug 2023",
-    description: "Assisted in developing features for a web application.",
+    description: "Haptic Feedback Research 🔬",
     skills: ["Unity","C#","Haptic Feedback","ArUco Markers","OpenCV"],
     achievements: [
       "Formulated a strategy to enhance mandibular reconstruction by overseeing a collaborative robot device using haptic and visual guidance",
@@ -368,7 +368,7 @@ export const EXPERIENCES = [
     startDate: "Feb 2022",
     endDate: "Apr 2022",
     period: "Feb 2022 - Apr 2022",
-    description: "Assisted in developing features for a web application.",
+    description: "Mentored in Unity game creation 🎮",
     skills: ["Unity", "C#"],
     achievements: [
       "Mentored 20 kids, ages 9-11, in creating their own 2D games using Unity through an engaging series of in-person workshops.",
