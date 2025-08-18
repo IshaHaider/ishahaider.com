@@ -62,15 +62,14 @@ export function Experience() {
 
             return (
               <div key={experience.id} className="relative">
-                {/* Timeline dot + endDate label */}
+                {/* Timeline dot */}
                 <div className="timeline-item">
                   <span className="timeline-date">
-                    {experience.endDate}
                   </span>
                   <div className="timeline-dot" />
                 </div>
 
-              <Card key={experience.id} className="enhanced-card card-animate opacity-0 relative overflow-hidden">
+              <Card key={experience.id} onClick={() => toggleExpand(experience.id)} className="enhanced-card card-animate opacity-0 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
                 <CardHeader className="md:pl-6">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
