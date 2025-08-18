@@ -81,9 +81,9 @@ export function Experience() {
                         </div>
                       </div>
                       <div>
-                        <CardTitle className="text-primary">{experience.title}</CardTitle>
+                        <CardTitle className="text-primary">{experience.company}</CardTitle>
                         <CardDescription className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-                          <span>{experience.company}</span>
+                          <span>{experience.title}</span>
                           <span className="hidden md:inline">•</span>
                           <span>{experience.location}</span>
                         </CardDescription>
