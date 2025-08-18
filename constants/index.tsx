@@ -11,7 +11,6 @@ import {
   Cpu,
   Terminal,
   Github,
-  MonitorSmartphone,
   Server,
   Table2,
   Webhook,
@@ -21,7 +20,6 @@ import {
   Share2,
   Container,
   Apple,
-  Boxes,
   BrainCircuit,
   Cuboid,
   CloudLightning,
@@ -43,14 +41,8 @@ import {
   Puzzle,
   Utensils,
   Laptop,
-  ArrowDown,
   Plane,
 } from "lucide-react"
-import { FaMusic, FaGlasses, FaGamepad, FaLightbulb, FaPlane, FaRobot, FaGlobe, FaUniversity, FaBook, FaCalendarAlt } from 'react-icons/fa';
-import { SiNintendogamecube } from "react-icons/si";
-import { FiCpu } from "react-icons/fi";
-import { GiDeathNote } from "react-icons/gi";
-import { FaAmericanSignLanguageInterpreting } from "react-icons/fa";
 import EduDialect from "../public/edu-dialect.png";
 import Arcurve from "../public/arcurve.png";
 import IBM from "../public/ibm.png";
@@ -395,7 +387,6 @@ export const PROJECTS = [
     class: "SENG401",
     description:
       "Rycho is an audio-sharing social media application for music and podcast enthusiasts, designed to create a vibrant community where users can discover, share, and engage with personalized content, leveraging features like customized playlists, song recommendations, and real-time interaction.",
-    image: <FaMusic />,
     githubUrl: "https://github.com/IshaHaider/Rycho",
     tags: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express", "AWS", "Spotify API", "Google Cloud", "CSS"],
   },
@@ -405,7 +396,6 @@ export const PROJECTS = [
     class: "Personal",
     description:
       "Developing advanced smart glasses that will produce scenic descriptions and real-time navigation through the utilization of computer vision and audio description. They will enhance scene understanding with CNNs (ResNet) and integrate Detectron2 for semantic segmentation and object recognition. This will work with rule-based systems to deliver directional audio cues via text-to-speech, improving accessibility and situational awareness.",
-    image: <SiNintendogamecube/>,
     githubUrl: "",
     tags: ["Embedded", "CNNs (ResNet)", "Detectron2"],
   },
@@ -415,7 +405,6 @@ export const PROJECTS = [
     class: "Personal",
     description:
       "Developed a Tetris game in C++ using OOP principles, focusing on modularity and maintainability. Implemented core mechanics like piece rotation, collision detection, line clearing, and a scoring system. Utilized SFML for GUI design, rendering game elements, managing user input, and handling real-time game logic.",
-    image: <FiCpu/>,
     githubUrl: "https://github.com/IshaHaider/Tetris",
     tags: ["C++", "SFML", "OOP"],
   },
@@ -425,7 +414,6 @@ export const PROJECTS = [
     class: "ENSF460",
     description:
       "Employed the PIC24F16K101 microcontroller for the precise control of LED brightness or intensity, connected to pin 12, and presented the results using Python in Spyder. The application integrates push buttons linked to input ports RA2, RA4, and RB4, utilizing UART and Timer peripherals within the MPLAB IDE to capture voltages and regulate LED delays.",
-    image: <FaLightbulb />,
     githubUrl: "https://youtu.be/IP5TtW9Qeco",
     tags: ["Python", "MPLAB X", "PIC24F16K101", "UART", "Embedded"],
   },
@@ -435,7 +423,6 @@ export const PROJECTS = [
     class: "ENSF480",
     description:
       "A Java-based web application developed with MySQL and Maven for a single airline company. It enables users and agents to browse, select, and manage flights, seats, and insurance. Registered users enjoy perks, and airline agents/admins can handle various management tasks. The project prioritizes systematic design and may see evolving requirements during development.",
-    image: <FaPlane />,
     githubUrl: "https://github.com/IshaHaider/FlightSimulator",
     tags: ["Java", "MySQL", "Maven", "Databases", "OOP", "MVC"],
   },
@@ -445,7 +432,6 @@ export const PROJECTS = [
     class: "ENSF381",
     description:
       "A React.js application that utilizes ChatGPT API for profile generation, Amazon Polly for speech synthesis, and Cloudinary API for storage. AWS services such as DynamoDB and Lambda handle backend data management and serverless functions, respectively. Python is employed for scripting, and infrastructure provisioning is managed through Terraform.",
-    image: <GiDeathNote />,
     githubUrl: "https://github.com/IshaHaider/Obituary-AI",
     tags: ["React", "ChatGPT API", "Amazon Polly", "Cloudinary API", "AWS", "Terraform", "DynamoDB"],
   },
@@ -455,7 +441,6 @@ export const PROJECTS = [
     class: "ENDG233",
     description:
       "A terminal-based Python application to process and plot data from CSV files based on user input. Utilized NumPy for data manipulation and Matplotlib for visualizations, enabling efficient data selection, processing, and graphical display.",
-    image: <FaGlobe />,
     githubUrl: "https://github.com/IshaHaider/Country-Statistics",
     tags: ["Python", "NumPy", "Matplotlib"],
   },
@@ -465,7 +450,6 @@ export const PROJECTS = [
     class: "ENSF300",
     description:
       "A Python application that connects to a MySQL database for maintenance, data entry, and browsing. It includes an admin interface for executing SQL commands, a data entry interface for managing records with user-friendly prompts, and a browsing interface for guided database exploration. User roles and access levels are determined through login credentials.",
-    image: <FaUniversity />,
     githubUrl: "https://github.com/IshaHaider/Museum-Project",
     tags: ["Python", "MySQL", "Databases", "OOP", "MVC"],
   },
@@ -475,7 +459,6 @@ export const PROJECTS = [
     class: "ENSF338",
     description:
       "The project involves creating a Java library called 'myLib' for common data structures, organized into a modular package. It includes linear data structures, tree structures, heaps, and graph algorithms, all designed for integers. The library will be tested using a main app or JUnit tests, with an option to support generic data types for extra credit.",
-    image: <FaBook />,
     githubUrl: "https://github.com/IshaHaider/Common-Data-Structures-Library",
     tags: ["Java", "Data Structures", "Algorithms", "OOP", "MVC", "JUnit"],
   },
@@ -485,7 +468,6 @@ export const PROJECTS = [
     class: "ENSF380",
     description:
       "Ever had to manage a centre of pets that require medicine, certain care, and certain foods given a limited amount of staff? This java program uses a clean GUI and an algorithm to sort through a database to create the perfect schedule to account for all pet needs.",
-    image: <FaCalendarAlt />,
     githubUrl: "https://github.com/IshaHaider/ScheduleBuilder",
     tags: ["Java", "GUI", "Databases", "Algorithms", "OOP", "MVC", "JUnit"],
   },
@@ -495,7 +477,6 @@ export const PROJECTS = [
     class: "Personal (Shopify)",
     description:
       "A small terminal line program that converts braille to english or english to braille",
-    image: <FaAmericanSignLanguageInterpreting />,
     githubUrl: "https://github.com/IshaHaider/braille-translator",
     tags: ["Python", "Data Patterns", "Algorithms", "OOP"],
   },

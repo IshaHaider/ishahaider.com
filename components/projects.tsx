@@ -288,25 +288,10 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="enhanced-card hover:translate-y-0 transition-all duration-300 min-h-[500px] max-h-[500px]">
+    <Card className="enhanced-card hover:translate-y-0 transition-all duration-300 min-h-[400px] max-h-[500px]">
       <div className="md:flex ">
-        {/* Image */}
-        <div className="md:w-1/3">
-          <div className="relative h-40 md:h-full overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-accent/20 z-10 text-[150px] md:text-[250px] text-cyan-900">
-            {project.image}
-            </div>
-            {/* <Image
-              src={project.image || "/placeholder.svg"}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform duration-500 hover:scale-110"
-            /> */}
-          </div>
-        </div>
-
         {/* Content */}
-        <div className="md:w-2/3 flex flex-col h-[500px] justify-center">
+        <div className="flex flex-col h-[400px] justify-center items-center text-center">
           <CardHeader>
             <CardTitle className="text-primary text-3xl">{project.title}</CardTitle>
             <div className="flex flex-wrap gap-2 mt-2">
@@ -324,7 +309,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           </CardContent>
 
           <CardFooter className="flex gap-2">
-            <Button asChild variant="outline" size="sm" className="flex-1 button-outline">
+            <Button asChild variant="outline" size="sm" className="flex-1 button-outline w-[200px]">
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" /> GitHub
               </a>
