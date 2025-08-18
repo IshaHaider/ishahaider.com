@@ -69,7 +69,10 @@ export function Experience() {
                   <div className="timeline-dot" />
                 </div>
 
-              <Card key={experience.id} onClick={() => toggleExpand(experience.id)} className="enhanced-card card-animate opacity-0 relative overflow-hidden">
+              <Card 
+                  key={experience.id} 
+                  onClick={() => toggleExpand(experience.id)} 
+                  className="enhanced-card card-animate opacity-0 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-primary"></div>
                 <CardHeader className="md:pl-6">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
@@ -112,7 +115,10 @@ export function Experience() {
                     variant="ghost"
                     size="sm"
                     className="flex items-center gap-2 text-primary/80 hover:text-primary hover:bg-primary/10"
-                    onClick={() => toggleExpand(experience.id)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleExpand(experience.id);
+                    }}
                   >
                     {isExpanded ? (
                       <>
