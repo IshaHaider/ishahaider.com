@@ -7,7 +7,7 @@ import Image from "next/image"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Github, ExternalLink, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
+import { Github, ExternalLink, ChevronLeft, ChevronRight, Pause, Play, Youtube, Coffee } from "lucide-react"
 import {PROJECTS} from "@/constants"
 
 export function Projects() {
@@ -294,7 +294,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex flex-col h-[400px] justify-center items-center text-center">
           <CardHeader>
             <CardTitle className="text-primary text-3xl">{project.title}</CardTitle>
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div className="flex flex-wrap gap-2 mt-2 justify-center">
               {project.tags.map((tag) => (
                 <Badge key={tag} className="badge-glow text-base">
                   {tag}
@@ -309,11 +309,30 @@ function ProjectCard({ project }: ProjectCardProps) {
           </CardContent>
 
           <CardFooter className="flex gap-2">
-            <Button asChild variant="outline" size="sm" className="flex-1 button-outline w-[200px]">
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" /> GitHub
-              </a>
-            </Button>
+            {project.githubUrl ? (
+              <Button asChild variant="outline" size="sm" className="flex-1 button-outline w-[200px]">
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" /> GitHub
+                </a>
+              </Button>
+            ) : null}
+            {project.youtubeUrl ? (
+              <Button asChild variant="outline" size="sm" className="flex-1 button-outline w-[200px]">
+                <a href={project.youtubeUrl} target="_blank" rel="noopener noreferrer">
+                  <Youtube className="mr-2 h-4 w-4" /> YouTube
+                </a>
+              </Button>
+            ) : null}
+            {!project.youtubeUrl && !project.githubUrl ? (
+              <Button
+                variant="outline"
+                size="sm"
+                disabled
+                className="flex-1 w-[200px] text-sm opacity-80 cursor-not-allowed"
+              >
+                <Coffee className="mr-2 h-6 w-6 animate-bounce text-amber-600" /> Still Brewing...
+              </Button>
+            ) : null}
           </CardFooter>
         </div>
       </div>

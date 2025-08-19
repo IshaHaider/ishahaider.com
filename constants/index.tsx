@@ -68,42 +68,42 @@ export const FAVOURITES = [
     icon: <Headphones className="h-6 w-6" />,
     title: "Podcast",
     content: "Can you be too self-aware?",
-    link: "https://podcasts.example.com/self-aware",
+    link: "https://open.spotify.com/episode/1qazN5UMAiKjGAWDmYIdI1?si=4f5a5fab83aa4753",
     delay: 1
   },
   {
     icon: <Book className="h-6 w-6" />,
     title: "Book",
-    content: "Look Again: The Power of Noticing What Was Always There",
-    link: "https://books.example.com/look-again",
+    content: "The Man Who Mistook His Wife for a Hat",
+    link: "https://www.goodreads.com/book/show/63697.The_Man_Who_Mistook_His_Wife_for_a_Hat_and_Other_Clinical_Tales",
     delay: 2
   },
   {
     icon: <Puzzle className="h-6 w-6" />,
     title: "Activity",
-    content: "Contexto Game",
-    link: "https://contexto.me",
+    content: "Taboo game",
+    link: "https://playtaboo.com/playpage/",
     delay: 3
   },
   {
     icon: <Utensils className="h-6 w-6" />,
     title: "Food",
     content: "Singaporian Rice",
-    link: "#",
+    link: "https://www.youtube.com/watch?v=MyM2KB93L3A",
     delay: 4
   },
   {
     icon: <Laptop className="h-6 w-6" />,
     title: "Languages",
     content: "Java",
-    link: "#",
+    link: "https://dev.to/shivabollam07/why-java-is-an-object-oriented-programming-language-4pgn",
     delay: 5
   },
   {
     icon: <Plane className="h-6 w-6" />,
     title: "Travel",
     content: "Turkey",
-    link: "https://hollowknight.com",
+    link: "https://globalgrasshopper.com/travel/10-beautiful-places-visit-turkey/",
     delay: 6
   }
 ];
@@ -382,104 +382,86 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    id: 0,
-    title: "Rycho",
-    class: "SENG401",
-    description:
-      "Rycho is an audio-sharing social media application for music and podcast enthusiasts, designed to create a vibrant community where users can discover, share, and engage with personalized content, leveraging features like customized playlists, song recommendations, and real-time interaction.",
-    githubUrl: "https://github.com/IshaHaider/Rycho",
-    tags: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express", "AWS", "Spotify API", "Google Cloud", "CSS"],
+  id: 0,
+  title: "Hidayah",
+  class: "Personal",
+  description:
+    "Hidayah is an Islamic lifestyle application currently under development, designed to provide a seamless digital space for Quran, Hadith, podcasts, stories, books, and AI-powered chat. The project integrates a modern multi-platform frontend with intelligent backend services, emphasizing authenticity, accessibility, and a spiritually enriching user experience.",
+  githubUrl: null, 
+  youtubeUrl: null,
+  tags: ["SwiftUI", "RAG", "LangChain", "OpenAI", "Vector Databases", "REST APIs", "GraphQL", "Flowise"],
   },
   {
     id: 1,
-    title: "VisionSync",
-    class: "Personal",
-    description:
-      "Developing advanced smart glasses that will produce scenic descriptions and real-time navigation through the utilization of computer vision and audio description. They will enhance scene understanding with CNNs (ResNet) and integrate Detectron2 for semantic segmentation and object recognition. This will work with rule-based systems to deliver directional audio cues via text-to-speech, improving accessibility and situational awareness.",
-    githubUrl: "",
-    tags: ["Embedded", "CNNs (ResNet)", "Detectron2"],
-  },
-  {
-    id: 2,
     title: "Tetris Game",
     class: "Personal",
     description:
       "Developed a Tetris game in C++ using OOP principles, focusing on modularity and maintainability. Implemented core mechanics like piece rotation, collision detection, line clearing, and a scoring system. Utilized SFML for GUI design, rendering game elements, managing user input, and handling real-time game logic.",
     githubUrl: "https://github.com/IshaHaider/Tetris",
+    youtubeUrl: "https://youtu.be/JCidJn4kmRA",
     tags: ["C++", "SFML", "OOP"],
   },
   {
+    id: 2,
+    title: "Rycho",
+    class: "SENG401",
+    description:
+      "Rycho is an audio-sharing social media application for music and podcast enthusiasts, designed to create a vibrant community where users can discover, share, and engage with personalized content, leveraging features like customized playlists, song recommendations, and real-time interaction.",
+    githubUrl: "https://github.com/IshaHaider/Rycho",
+    youtubeUrl: "https://youtu.be/dnIq0Uq3S08",
+    tags: ["React", "Tailwind CSS", "Node.js", "MongoDB", "Express", "AWS", "Spotify API", "Google Cloud", "CSS"],
+  },
+  {
     id: 3,
+    title: "VisionSync",
+    class: "Personal",
+    description:
+      "Developing advanced smart glasses that will produce scenic descriptions and real-time navigation through the utilization of computer vision and audio description. They will enhance scene understanding with CNNs (ResNet) and integrate Detectron2 for semantic segmentation and object recognition. This will work with rule-based systems to deliver directional audio cues via text-to-speech, improving accessibility and situational awareness.",
+    githubUrl: null,
+    youtubeUrl: null,
+    tags: ["Embedded", "CNNs (ResNet)", "Detectron2"],
+  },
+  {
+    id: 4,
     title: "Embedded Systems LED Controller",
     class: "ENSF460",
     description:
       "Employed the PIC24F16K101 microcontroller for the precise control of LED brightness or intensity, connected to pin 12, and presented the results using Python in Spyder. The application integrates push buttons linked to input ports RA2, RA4, and RB4, utilizing UART and Timer peripherals within the MPLAB IDE to capture voltages and regulate LED delays.",
-    githubUrl: "https://youtu.be/IP5TtW9Qeco",
+    githubUrl: null,
+    youtubeUrl: "https://youtu.be/IP5TtW9Qeco",
     tags: ["Python", "MPLAB X", "PIC24F16K101", "UART", "Embedded"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Flight Simulator",
     class: "ENSF480",
     description:
       "A Java-based web application developed with MySQL and Maven for a single airline company. It enables users and agents to browse, select, and manage flights, seats, and insurance. Registered users enjoy perks, and airline agents/admins can handle various management tasks. The project prioritizes systematic design and may see evolving requirements during development.",
     githubUrl: "https://github.com/IshaHaider/FlightSimulator",
+    youtubeUrl: null,
     tags: ["Java", "MySQL", "Maven", "Databases", "OOP", "MVC"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Obituary-AI Application",
     class: "ENSF381",
     description:
       "A React.js application that utilizes ChatGPT API for profile generation, Amazon Polly for speech synthesis, and Cloudinary API for storage. AWS services such as DynamoDB and Lambda handle backend data management and serverless functions, respectively. Python is employed for scripting, and infrastructure provisioning is managed through Terraform.",
     githubUrl: "https://github.com/IshaHaider/Obituary-AI",
+    youtubeUrl: null,
     tags: ["React", "ChatGPT API", "Amazon Polly", "Cloudinary API", "AWS", "Terraform", "DynamoDB"],
   },
   {
-    id: 6,
-    title: "Country Stats Terminal App",
-    class: "ENDG233",
-    description:
-      "A terminal-based Python application to process and plot data from CSV files based on user input. Utilized NumPy for data manipulation and Matplotlib for visualizations, enabling efficient data selection, processing, and graphical display.",
-    githubUrl: "https://github.com/IshaHaider/Country-Statistics",
-    tags: ["Python", "NumPy", "Matplotlib"],
-  },
-  {
     id: 7,
-    title: "Museum Management System",
-    class: "ENSF300",
-    description:
-      "A Python application that connects to a MySQL database for maintenance, data entry, and browsing. It includes an admin interface for executing SQL commands, a data entry interface for managing records with user-friendly prompts, and a browsing interface for guided database exploration. User roles and access levels are determined through login credentials.",
-    githubUrl: "https://github.com/IshaHaider/Museum-Project",
-    tags: ["Python", "MySQL", "Databases", "OOP", "MVC"],
-  },
-  {
-    id: 8,
-    title: "Data Structures Lib",
-    class: "ENSF338",
-    description:
-      "The project involves creating a Java library called 'myLib' for common data structures, organized into a modular package. It includes linear data structures, tree structures, heaps, and graph algorithms, all designed for integers. The library will be tested using a main app or JUnit tests, with an option to support generic data types for extra credit.",
-    githubUrl: "https://github.com/IshaHaider/Common-Data-Structures-Library",
-    tags: ["Java", "Data Structures", "Algorithms", "OOP", "MVC", "JUnit"],
-  },
-  {
-    id: 9,
     title: "Schedule Builder",
     class: "ENSF380",
     description:
       "Ever had to manage a centre of pets that require medicine, certain care, and certain foods given a limited amount of staff? This java program uses a clean GUI and an algorithm to sort through a database to create the perfect schedule to account for all pet needs.",
     githubUrl: "https://github.com/IshaHaider/ScheduleBuilder",
+    youtubeUrl: null,
     tags: ["Java", "GUI", "Databases", "Algorithms", "OOP", "MVC", "JUnit"],
   },
-  {
-    id: 10,
-    title: "Braille Translator",
-    class: "Personal (Shopify)",
-    description:
-      "A small terminal line program that converts braille to english or english to braille",
-    githubUrl: "https://github.com/IshaHaider/braille-translator",
-    tags: ["Python", "Data Patterns", "Algorithms", "OOP"],
-  },
+  
 ];
 
 
