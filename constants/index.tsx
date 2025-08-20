@@ -46,7 +46,7 @@ import {
 import EduDialect from "../public/edu-dialect.png";
 import Arcurve from "../public/arcurve.png";
 import IBM from "../public/ibm.png";
-import MorganStanley from "../public/morgan-stanley.jpg";
+import MorganStanley from "../public/morgan-stanley.png";
 import SolarCar from "../public/solar-car.png";
 import SCRP from "../public/scrp.png";
 import Schulich from "../public/schulich.jpg";
@@ -263,8 +263,7 @@ export const EXPERIENCES = [
       <Image
         src={Arcurve}
         alt="Arcurve logo"
-        unoptimized
-        className="w-full h-full object-cover bg-transparent"
+        className="w-full h-full object-cover"
       />
     ),
     title: "Software Developer Intern",

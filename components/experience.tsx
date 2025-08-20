@@ -78,7 +78,7 @@ export function Experience() {
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                     <div className="flex items-start gap-3">
                       <div className="hidden md:flex h-10 w-10 rounded-full bg-accent/50 items-center justify-center text-primary">
-                        <div className="h-full w-full rounded-full overflow-hidden flex items-center justify-center border-2 border-white bg-gray-800">
+                        <div className="h-full w-full rounded-full overflow-hidden flex items-center justify-center border-2 border-white">
                         {experience.icon}
                         </div>
                       </div>
